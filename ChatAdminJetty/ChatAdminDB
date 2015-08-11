@@ -1,0 +1,241 @@
+CREATE DATABASE  IF NOT EXISTS `ChatAdmin` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `ChatAdmin`;
+-- MySQL dump 10.13  Distrib 5.5.34, for debian-linux-gnu (x86_64)
+--
+-- Host: 127.0.0.1    Database: ChatAdmin
+-- ------------------------------------------------------
+-- Server version	5.5.34-0ubuntu0.13.04.1
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `tbl_GroupEmotion`
+--
+
+DROP TABLE IF EXISTS `tbl_GroupEmotion`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tbl_GroupEmotion` (
+  `GroupEmotionId` int(11) NOT NULL AUTO_INCREMENT,
+  `Name` varchar(100) NOT NULL,
+  PRIMARY KEY (`GroupEmotionId`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tbl_GroupEmotion`
+--
+
+LOCK TABLES `tbl_GroupEmotion` WRITE;
+/*!40000 ALTER TABLE `tbl_GroupEmotion` DISABLE KEYS */;
+INSERT INTO `tbl_GroupEmotion` VALUES (1,'Meme smile'),(2,'Girl Chibi'),(3,'12 cung hoang dao'),(4,'12 con giap');
+/*!40000 ALTER TABLE `tbl_GroupEmotion` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `Roles`
+--
+
+DROP TABLE IF EXISTS `Roles`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Roles` (
+  `RoleId` int(11) NOT NULL AUTO_INCREMENT,
+  `Name` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`RoleId`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Roles`
+--
+
+LOCK TABLES `Roles` WRITE;
+/*!40000 ALTER TABLE `Roles` DISABLE KEYS */;
+/*!40000 ALTER TABLE `Roles` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tbl_Room`
+--
+
+DROP TABLE IF EXISTS `tbl_Room`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tbl_Room` (
+  `RoomId` int(11) NOT NULL AUTO_INCREMENT,
+  `Name` varchar(45) DEFAULT NULL,
+  `StatusRoomId` int(11) NOT NULL,
+  `UserOnline` int(11) NOT NULL,
+  PRIMARY KEY (`RoomId`),
+  KEY `fk_tbl_Room_StatusRoomId` (`StatusRoomId`),
+  KEY `fk_tbl_Room_1` (`StatusRoomId`),
+  CONSTRAINT `fk_tbl_Room_1` FOREIGN KEY (`StatusRoomId`) REFERENCES `tbl_StatusRoom` (`StatusRoomId`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tbl_Room`
+--
+
+LOCK TABLES `tbl_Room` WRITE;
+/*!40000 ALTER TABLE `tbl_Room` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tbl_Room` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tbl_UsedRoom`
+--
+
+DROP TABLE IF EXISTS `tbl_UsedRoom`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tbl_UsedRoom` (
+  `UsedRoomId` int(11) NOT NULL AUTO_INCREMENT,
+  `RoomId` int(11) NOT NULL,
+  `DayUsed` date DEFAULT NULL,
+  `Views` int(11) DEFAULT NULL,
+  PRIMARY KEY (`UsedRoomId`),
+  KEY `fk_tbl_UsedRoom_1_idx` (`RoomId`),
+  CONSTRAINT `fk_tbl_UsedRoom_RoomId` FOREIGN KEY (`RoomId`) REFERENCES `tbl_Room` (`RoomId`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tbl_UsedRoom`
+--
+
+LOCK TABLES `tbl_UsedRoom` WRITE;
+/*!40000 ALTER TABLE `tbl_UsedRoom` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tbl_UsedRoom` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tbl_User`
+--
+
+DROP TABLE IF EXISTS `tbl_User`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tbl_User` (
+  `UserId` int(11) NOT NULL AUTO_INCREMENT,
+  `Username` varchar(45) DEFAULT NULL,
+  `Password` varchar(45) DEFAULT NULL,
+  `Email` varchar(45) DEFAULT NULL,
+  `Gender` bit(1) DEFAULT NULL,
+  `FullName` varchar(45) DEFAULT NULL,
+  `BirthDay` date DEFAULT NULL,
+  `RoleId` int(11) NOT NULL,
+  PRIMARY KEY (`UserId`),
+  KEY `fk_tbl_User_1` (`RoleId`),
+  CONSTRAINT `fk_tbl_User_1` FOREIGN KEY (`RoleId`) REFERENCES `Roles` (`RoleId`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tbl_User`
+--
+
+LOCK TABLES `tbl_User` WRITE;
+/*!40000 ALTER TABLE `tbl_User` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tbl_User` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tbl_UsedEmotion`
+--
+
+DROP TABLE IF EXISTS `tbl_UsedEmotion`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tbl_UsedEmotion` (
+  `UsedEmotionId` int(11) NOT NULL AUTO_INCREMENT,
+  `EmotionId` int(11) DEFAULT NULL,
+  `DayUsed` date DEFAULT NULL,
+  `Views` int(11) DEFAULT NULL,
+  PRIMARY KEY (`UsedEmotionId`),
+  KEY `fk_tbl_UsedEmotion_1_idx` (`EmotionId`),
+  KEY `fk_tbl_UsedEmotion_1` (`EmotionId`),
+  CONSTRAINT `fk_tbl_UsedEmotion_1` FOREIGN KEY (`EmotionId`) REFERENCES `tbl_Emotion` (`EmotionId`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tbl_UsedEmotion`
+--
+
+LOCK TABLES `tbl_UsedEmotion` WRITE;
+/*!40000 ALTER TABLE `tbl_UsedEmotion` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tbl_UsedEmotion` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tbl_Emotion`
+--
+
+DROP TABLE IF EXISTS `tbl_Emotion`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tbl_Emotion` (
+  `EmotionId` int(11) NOT NULL AUTO_INCREMENT,
+  `LinkImage` varchar(100) DEFAULT NULL,
+  `Description` varchar(100) DEFAULT NULL,
+  `GroupEmotionId` int(11) NOT NULL,
+  PRIMARY KEY (`EmotionId`),
+  KEY `fk_tbl_Emotion_1` (`GroupEmotionId`),
+  CONSTRAINT `fk_tbl_Emotion_1` FOREIGN KEY (`GroupEmotionId`) REFERENCES `tbl_GroupEmotion` (`GroupEmotionId`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tbl_Emotion`
+--
+
+LOCK TABLES `tbl_Emotion` WRITE;
+/*!40000 ALTER TABLE `tbl_Emotion` DISABLE KEYS */;
+INSERT INTO `tbl_Emotion` VALUES (8,'emotions-image/theme1/item1.png','',1),(14,'emotions-image/theme1/item2.png',NULL,1),(15,'emotions-image/theme2/item4.gif',NULL,2),(16,'emotions-image/theme2/item1.gif',NULL,2),(17,'emotions-image/theme2/item2.gif',NULL,2),(18,'emotions-image/theme2/item3.gif','',2),(19,'emotions-image/theme1/item3.png',NULL,1),(20,'emotions-image/theme2/item5.gif',NULL,2),(21,'emotions-image/theme2/item6.gif',NULL,2),(22,'emotions-image/theme2/item7.gif',NULL,2),(23,'emotions-image/theme2/item8.gif',NULL,2),(24,'emotions-image/theme2/item9.gif',NULL,2),(25,'emotions-image/theme2/item10.png',NULL,2),(26,'emotions-image/12giap/item1.gif',NULL,3),(27,'emotions-image/12giap/item2.gif',NULL,3),(28,'emotions-image/12giap/item3.gif',NULL,3),(29,'emotions-image/zodiac/item1.gif',NULL,4),(30,'emotions-image/zodiac/item2.gif',NULL,4);
+/*!40000 ALTER TABLE `tbl_Emotion` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tbl_StatusRoom`
+--
+
+DROP TABLE IF EXISTS `tbl_StatusRoom`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tbl_StatusRoom` (
+  `StatusRoomId` int(11) NOT NULL,
+  `Name` varchar(45) NOT NULL,
+  PRIMARY KEY (`StatusRoomId`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tbl_StatusRoom`
+--
+
+LOCK TABLES `tbl_StatusRoom` WRITE;
+/*!40000 ALTER TABLE `tbl_StatusRoom` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tbl_StatusRoom` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2013-11-11 17:14:04

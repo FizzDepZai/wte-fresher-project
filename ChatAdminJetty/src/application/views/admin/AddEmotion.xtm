@@ -1,0 +1,69 @@
+     <div id="main-content" class="clearfix">
+            <div id="breadcrumbs">
+                <ul class="breadcrumb">
+                     <li><i class="icon-home"></i> <a href="{{host}}/index">Home</a><span class="divider"><i class="icon-angle-right"></i></span></li>
+                    <li><a href="{{host}}/groupEmotion">Emotion Group</a> <span class="divider"><i class="icon-angle-right"></i></span></li>
+                     <li class="active">Emotion </li>
+                </ul><!--.breadcrumb-->
+
+                <div id="nav-search">
+                    <form class="form-search">
+                        <span class="input-icon">
+                            <input autocomplete="off" id="nav-search-input" type="text" class="input-small search-query" placeholder="Search ..." />
+                            <i id="nav-search-icon" class="icon-search"></i>
+                        </span>
+                    </form>
+                </div><!--#nav-search-->
+            </div><!--#breadcrumbs-->
+
+            <div id="page-content" class="clearfix">
+            <h3> Add Emotions </h3>
+                
+
+                <div class="span8">
+                {{errorExist}}
+                <div style="margin-top: 15px;">
+                     <form method="post" action="">
+                            <table id="table_bug_report" class="table table-striped table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Image</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                     <tr>
+                                         <td colspan="5">
+                                         
+                                                <center>
+                                    <input type="submit" value="Add Emotion" class="btn btn-success" />
+                                               </center>
+                                         
+                                         </td>
+                                      </tr>
+                                 </tfoot>     
+                                <tbody>
+                                    {{#listEmotion}}
+                                    {{#emotionItem}}
+                                    <tr>
+                                        <td>{{=imageId}}</td>
+                                        <td><img src="{{=imageLink}} " width="55" height="55"></td>
+                                        <td>
+                                            <input type="text" style="width:100%;" name = "description{{=imageId}}"/>
+                                        </td>
+
+
+                                    </tr>
+                                    {{/emotionItem}}
+                                    {{/listEmotion}}
+
+
+
+                                </tbody>
+                            </table>
+                             </form>    
+                           </div>
+                        </div><!--/span-->
+  </div><!--/#page-content-->
+     </div>

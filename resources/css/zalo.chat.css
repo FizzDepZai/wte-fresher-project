@@ -1,0 +1,165 @@
+.conversation-item {
+	font-size: 18px;
+	text-align: left;
+	margin-bottom: 12px;
+
+}
+
+.conversation-item.right{
+	float: right;
+	padding-right: 10px;
+}
+
+.conversation-item.left{
+	float: left;
+	padding-left: 10px;
+}
+
+
+.conversation-item.right  .msg-content{
+	margin: 5px 10px 10px 10px; 
+	font-size: 18px;
+	float: right;
+
+}
+
+.conversation-item.left  .msg-content-left{
+	margin: 5px 10px 10px 10px; 
+	font-size: 18px;
+	float: left;
+}
+
+
+.conversation-item  .wrapper-ava {
+	float: right;
+}
+
+
+.conversation-item  .wrapper-ava .msg-ava {
+	width: 40px;
+	height: 40px;
+}
+
+
+.conversation-item  .wrapper-bubble {
+	float: left;
+	padding: 0 13px;
+}
+
+/*
+* bubble text right
+*/
+.msg-bubble
+{
+	position: relative;
+	max-width: 300px;
+	min-width: 100px;
+	min-height: 50px;
+	line-height: 25px;
+	overflow: hidden;
+	padding: 0 0 10px;
+	word-break: break-all;
+	background: #d3effe;
+	border: #b3d3e4 solid 1px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+
+/*
+* icon tro
+*/
+.msg-bubble:before 
+{
+	content: "";
+	position: absolute;
+	top: 15px;
+	left: calc(100% + 0.99999237060547px);
+	border-style: solid;
+	border-width: 7px 0 7px 8px;
+	border-color: transparent #b3d3e4;
+	display: block;
+	width: 0;
+	z-index: 0;
+}
+
+.msg-bubble:after 
+{
+	content: "";
+	position: absolute;
+	top: 15px;
+	right: -8px;
+	border-style: solid;
+	border-width: 7px 0 7px 8px;
+	border-color: transparent #d3effe;
+	display: block;
+	width: 0;
+	z-index: 1;
+}
+
+/*
+* bubble text left
+*/
+.msg-bubble-left
+{
+
+	position: relative;
+	max-width: 300px;
+	min-width: 100px;
+	min-height: 50px;
+	line-height: 25px;
+	overflow: hidden;
+	padding: 0 0 10px;
+	word-break: break-all;
+	background: #F2F2F2;
+	border: #b3d3e4 solid 1px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+
+
+
+}
+/*
+* date time send image
+*/
+.conversation-item  .msg-status-image {
+	margin: 70px 5px 10px 10px; 
+	font-size: 9px;
+	float: left;
+}
+/*
+* date time send image left
+*/
+.conversation-item  .msg-status-image-left{
+	margin: 70px 5px 10px 10px; 
+	font-size: 9px;
+	float: left;
+
+}
+
+
+
+/*
+* date time send text 
+*/
+ .msg-status {
+/*	margin: 40px 5px 10px 10px; 
+*/	font-size: 9px;
+
+}
+/*
+* date time send text left
+*/
+ .msg-status-left {
+/*	margin: 40px 5px 10px 10px; 
+*/	font-size: 9px;
+}
+
+
+
+
+
+
+
+

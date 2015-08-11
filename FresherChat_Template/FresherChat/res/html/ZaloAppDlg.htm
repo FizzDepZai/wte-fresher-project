@@ -1,0 +1,420 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+    <title>Zalo</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="imagetoolbar" content="no" />
+    <!-- css all -->
+    <link href="./css/zalo.all.css" rel="stylesheet" type="text/css" />
+    <!-- css app -->
+    <link href="./css/zalo.app.css" rel="stylesheet" type="text/css" />
+    <!-- css chat -->
+    <link href="./css/zalo.chat.css" rel="stylesheet" type="text/css" /> 
+
+    <!-- basic styles -->
+        <!-- <link href="assets/css/bootstrap.min.css" rel="stylesheet" /> -->
+        <link href="assets/css/uncompressed/bootstrap.css" rel="stylesheet" />
+
+        <link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet" />
+
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+        <!--[if IE 7]>
+          <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+        <![endif]-->
+
+
+        <!-- page specific plugin styles -->
+        
+        <link rel="stylesheet" href="assets/css/colorbox.css" />
+
+        <!-- ace styles -->
+        <link rel="stylesheet" href="assets/css/uncompressed/ace.css" />
+        <link rel="stylesheet" href="assets/css/uncompressed/ace-responsive.css" />
+        <link rel="stylesheet" href="assets/css/uncompressed/ace-skins.css" />
+        <link rel="stylesheet" href="assets/css/chatv2.css" />
+      <!-- /*  <style>
+            #search-text{
+                width:  80%;
+            }
+        </style>*/ -->
+</head>
+<body>
+
+
+    <!-- wrapper -->
+    <div id="wrapper">
+        <div id="left-bar" class="left-float">
+            <ul id="left-menu">
+                <li class="contacts-btn menu-btn active" id="btn-profile">
+                    <div class="icon">
+                    </div>
+             
+                </li>
+                <li class="conversation-btn menu-btn">
+                    <div class="icon">
+                    </div>
+                </li>
+                <li class="recents-btn menu-btn">
+                    <div class="icon">
+                    </div>
+                </li>
+              
+                <li class="keypad-btn menu-btn">
+                    <div class="icon">
+                    </div>
+                </li>
+                <li class="settings-btn menu-btn">
+                    <div class="icon">
+                    </div>
+                </li>
+            </ul><!-- end left-menu -->
+        </div> <!-- end left-bar -->
+
+                    <!-- <a class="contacts-menu" href="#" data-toggle="dropdown">
+                        </a> -->
+
+        <div id="middle-bar">
+            <div id="contacts" class="left-float">
+                <div id="search-box">
+                    <!-- <input type="text" id="search-text" class="deftext-active" title="Search..." value="Search..." /> -->
+                    <div class="left-text-search"></div>
+                    <input type="text" id="search-text" class="middle-text-search" title="Search..." value="Search..."/>
+                    <div class="right-text-search"></div>
+
+                    <div class="remove-btn hidden">
+                    </div>
+                </div>
+                <div class="app-status text-center hidden">
+                    <div class="name-status">
+                    </div>
+                </div>
+
+                <div id="items">
+                    <div id="contain-items" class="text-center">
+                        <div class="no-items">
+                            <div class="no-items-text">
+                                No contacts</div>
+                            <div class="no-items-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- end middle-bar-->
+
+        <div id="right-content" class="left-float">
+            <div id="no-conversation" class="hidden top-right-content">
+                <img alt="" src="./img/zalo.no.conv.png" />
+                <div class="guide-text">Hi there, your contacts are already here.</div>
+                <div class="guide-text">Select a contact to start a conversation.</div>
+            </div><!-- end: no-conversation -->
+            <div id="conversation-info" class="hidden top-right-content">
+                <div class="talker-info">
+                    <div class="talker-img">
+                        <div class="talker-avatar">
+                            <img alt="ava" src="http://s240.avatar.talk.zdn.vn/default" />
+                        </div>
+                    </div>
+                    <div class="talker-action">
+                        <div class="talker-name">
+                            <span>Sample</span>
+                        </div>
+                        <div class="cb">
+                        </div>
+                      </div>
+                    <div class="invite-talker">
+                    </div>
+                </div>
+                <div class="conversation-divide">
+                </div>
+            </div><!--end: conversation-info -->
+
+        
+            <div id="conversation-content" class="text-center"> </div>
+            <div id="chat-editor" class="hidden">
+                <div class="photo-input"></div>
+                <div class="separate-input"></div>
+                <div class="sticker-input"  id="btn-emotion"></div>
+                <!-- EMOTION -->
+                        <div id="tinypopover-emoticons" class="non-display" >
+                            <div id="zme-emotion-box" style="position: absolute; margin-top:-250px;" class="bxemotion boxshadow_popup"> 
+                                <!-- <a id="emotionclose" class="disboxclose" style="" title="Đóng" href="#">Đóng</a> -->
+                                <div class="popup_edge_shadow">                         
+                                    <!-- <span class="skin arrow_emo" style="display: none;"></span>                             -->
+                                    <div id="zme-emotion-content" class="popup_border">    
+                                        <div class="ctnemotion">                                  
+                                            <ul class="tabemotion">
+                                                <li class="emot-wpr wpr-emotion"><a href="#" rel="emotion">Emotion</a></li>
+                                                <li class="emot-wpr wpr-sticker"><a href="#" rel="sticker" class="current">Sticker</a></li>
+                                                <li class="emot-wpr wpr-store"><a href="#" rel="store" class="">Animation</a></li>
+                                            </ul>                                   
+                                            
+                                            <!-- Tab EMOTION -->
+                                            <div style="" class="tab_emotion tabemoctn">                                                               
+                                                <ul class="itememotion">
+                                                    <div class="zmscrollableui" style="width: 420px; height: 177px;">
+
+                                                        <div class="zmscrollableui_wrapper" tabindex="0">
+                                                            <div class="zmscrollableui_body" style="width: 420px;">
+                                                                <div id="idContentSet" class="zmscrollableui_content">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- cua so cam xuc chinh -->
+                                                        <div class="zmscrollableui_bar unselectable" unselectable="on" style="visibility: hidden;">
+                                                            <div class="zmscrollableui_gripper">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </ul>                                 
+                                            </div> 
+
+                                            <!-- Tab STICKER -->
+                                            <div class="tab_sticker tabemoctn" style="">
+                                                <ul class="itemsticker">
+                                                    <div class="zmscrollableui" style="width: 420px; height: 177px;">
+                                                        <div class="zmscrollableui_wrapper" tabindex="0">
+                                                            <div class="zmscrollableui_body" style="width: 420px;">
+                                                                <div id="idContentSet" class="zmscrollableui_content">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="zmscrollableui_bar unselectable" unselectable="on" style="visibility: hidden;">
+                                                            <div class="zmscrollableui_gripper">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </ul>                                      
+                                            </div>
+
+                                            <!-- Tab Animation -->
+                                            <div class="tab_store tabemoctn" style="display: none;">                                        
+                                                <ul class="itemsticker itemstore">
+                                                    <div class="zmscrollableui" style="width: 420px; height: 177px;">
+                                                        <div class="zmscrollableui_wrapper" tabindex="0">
+                                                            <div class="zmscrollableui_body" style="width: 420px;">
+                                                                <div class="zmscrollableui_content">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="zmscrollableui_bar unselectable" unselectable="on" style="visibility: hidden;">
+                                                            <div class="zmscrollableui_gripper">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </ul>                                                               
+                                            </div>
+                                          <!--   <div class="zmscrollableui_bar unselectable" unselectable="on" style="visibility: hidden;">
+                                                <div class="zmscrollableui_gripper"></div>
+                                            </div>    -->               
+                                        </div>   
+                                    </div>               
+                                    <span style="left: 37px;" class="skin arrow_emobot"></span>  
+                                </div>               
+                            </div>
+                        </div>
+            <!-- END EMOTION -->
+                <div class="text-input">
+                    <div class="left-text-input"></div>
+                    <input type="text" class="middle-text-input"/>
+                    <div class="right-text-input"></div>
+                </div>
+                <div class="send-btn btn-quinary btn">Send</div>
+            </div><!--end: chat editor -->
+        </div><!-- end right-content -->
+
+           <div>  
+                 <ul id="contacts_menu" class = "hidden">
+                        <li><a href="#"><i class="icon-cog" ></i> Settings</a></li>
+                        <li><a href="#"><i class="icon-user"></i> Profile</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#"><i class="icon-off"></i> Logout</a></li>
+                    </ul>
+                </div>
+    </div>
+
+
+
+        <!-- basic scripts -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        
+        
+        <script src="assets/js/bootstrap.min.js"></script>
+
+        <!-- page specific plugin scripts -->
+        
+        <script type="text/javascript" src="assets/js/jquery.colorbox-min.js"></script>
+
+
+        <!-- ace scripts -->
+        <script src="assets/js/ace-elements.min.js"></script>
+        <script src="assets/js/ace.min.js"></script>
+     <!-- // <script src="assets/js/chatv2.js"></script> -->
+
+        <script src="assets/js/selector.js"></script>
+        <script src="assets/js/tinytooltip.js"></script>
+        <!-- inline scripts related to this page -->
+        <!-- js jquery -->
+        <script language="javascript" type="text/javascript" src="./js/jquery-1.9.1.min.js"></script>
+        <!-- js jquery slimscroll-->
+        <script language="javascript" type="text/javascript" src="./js/jquery.slimscroll.js"></script>
+        <!-- js data structure -->
+        <script language="javascript" type="text/javascript" src="./js/zalo.data.js"></script>
+        <!-- js global -->
+        <script language="javascript" type="text/javascript" src="./js/zalo.global.js"></script>
+        <!-- js external -->
+        <script language="javascript" type="text/javascript" src="./js/zalo.window.external.js"></script>
+        <!-- js app -->
+        <script language="javascript" type="text/javascript" src="./js/zalo.app.js"></script>
+        <!-- js chat -->
+        <script language="javascript" type="text/javascript" src="./js/zalo.chat.js"></script>
+        <!-- js xdomain -->
+        <script language="javascript" type="text/javascript" src="./js/jquery.xdomainrequest.min.js"></script>
+        <script type="text/javascript">
+
+        // Data initialize
+
+        // Servers config
+
+
+        // string of friend id "<id1>K<id2>K..<idn>"
+        var friendIds="";
+
+        // chat groups data
+        // "GROUP<id>":{id:<id>, name:"<name>", image:"<img-src>", members:[<mem-id>]},
+        var groups_data = {};
+
+        // the user in group chat
+        var anonymous_users = {};
+
+        // current login user
+        var me_id = {{id}};
+
+        // list user request friend
+
+        // list user send offline message
+        var offline_msg_users = [];
+
+        // current friend list load
+        var current_friend_list = 0;
+
+        //current group list load
+        var current_group_list = 0;
+
+        // error on ajax long polling
+        var errorCount = 0;
+
+        // search key for findfiends
+        var search_key = "";
+
+        // current load results on findfriends
+        var current_search_load = 0;
+        </script>
+
+        <script src="assets/js/WTE.js"></script>
+        <script src="assets/js/chatv2.js"></script>
+        <script src="assets/js/fileupload.js"></script>
+
+        <!-- Autocomple -->
+        <script type="text/javascript" src="assets/js/autocomplete.js"></script>
+        <script type="text/javascript">
+        WTEAutoComplete(
+        {
+            //id cua doi tuong
+            elemId: "autocomplete-search",
+            //so char them moi toi thieu truoc khi goi ajax lay du lieu ve
+            chars: 1
+        });
+        
+$(function() {
+
+    var colorbox_params = {
+        reposition:true,
+        scalePhotos:true,
+        scrolling:false,
+        previous:'<i class="icon-arrow-left"></i>',
+        next:'<i class="icon-arrow-right"></i>',
+        close:'&times;',
+        current:'{current} of {total}',
+        maxWidth:'100%',
+        maxHeight:'100%',
+        onOpen:function(){
+            document.body.style.overflow = 'hidden';
+        },
+        onClosed:function(){
+            document.body.style.overflow = 'auto';
+        },
+        onComplete:function(){
+            $.colorbox.resize();
+        }
+    };
+
+    $('.ace-thumbnails [data-rel="colorbox"]').colorbox(colorbox_params);
+
+    $(window).on('resize.colorbox', function() {
+        try {
+            $.fn.colorbox.load();//to redraw the current frame
+        } catch(e){}
+    });
+
+
+})
+
+        </script>
+
+
+<script type="text/javascript">
+// window onload
+window.onload = function(){
+     $("#tinypopover-emoticons").hide();     
+     // $("#user_menu").hide();   
+    loadEmoticons();
+  //  loadFriendList(0, 10);
+   // loadUserGroups(me_id, 0, 10);  
+};
+</script>
+
+<script>
+    $(document).ready(function(){
+        $("#btn-emotion").click(function(){
+            $("#tinypopover-emoticons").toggle();
+        // $("#btn-profile").click(function(){
+        //     $("#user_menu").toggle();
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function(){
+       
+         $("ul#left-menu > li").click(function(){
+            var profileId = $("ul#left-menu> :first-child").attr("id");
+            var clickedID = $(this).attr("id");
+            if( profileId != clickedID){
+                 $("#contacts_menu").hide();
+            }
+            
+        });
+        $("#btn-profile").click(function(){
+            if($("#contacts_menu").hasClass("hidden")){
+                $("#contacts_menu").removeClass("hidden");
+             }
+            $("#contacts_menu").toggle();
+       
+        });
+    });
+
+</script>
+
+
+
+<!-- ----------------------------------------------test----------------------------------------------------------- -->
+<!-- ----------------------------------------------test----------------------------------------------------------- -->
+<!-- ----------------------------------------------test----------------------------------------------------------- -->
+
+</body>
+
+
+</html>

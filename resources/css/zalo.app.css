@@ -1,0 +1,729 @@
+#container{
+    background-image: url(../img/background.png); 
+    background-attachment: fixed;
+    background-repeat: no-repeat; 
+    background-size: 100% 100%; 
+    height: 100%;
+    min-height: 550px;
+    min-width: 950px; 
+}
+
+#wrapper {
+    position: relative;
+    margin: 0 auto;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 882px;
+    height: 80% !important;
+    border-radius: 4px;
+    text-align: center;
+    min-height: 440px;
+}
+
+#leftpanel{
+    position: relative;
+    background: #262626;
+    float: left;
+    width: 296px;
+    border-radius: 6px;
+    height: 100%;
+    z-index: 99;
+    border: 1px solid #424448;
+    box-shadow: 0 2px 6px #313131;
+    border: 5px solid #262626;
+    min-height: 400px;
+}
+
+#lefttop{
+    height: 45px;
+    position: relative;
+    width: 296px;
+    background: #262626;
+    border-radius: 6px;
+}
+
+#lefttop img{
+    position: absolute;
+    top: -26px;
+    left: 32px;
+    z-index: 100;
+    width: 60px;
+    height: 60px;
+    /*transform: rotate(4deg);
+    -moz-transform: rotate(4deg);*/
+    /*background: url("../images/avatar_default.png") no-repeat center;*/
+}
+
+#lefttop .avatar{
+    position: absolute;
+    top: -75px;
+    left: -22px;
+    width: 130px;
+    height: 130px;
+    background: url(../img/red_grungy_frame.png) no-repeat;
+    z-index: 101;
+    /*background: url(../images/border_myprofile_avatar.ie.png) no-repeat\9;*/
+    /*background: url(../images/border_myprofile_avatar.ie.png) no-repeat\0;*/
+}
+
+#lefttop .user-name{
+    color:white;
+    line-height:40px;
+    font-size:15px; 
+    left: 45px;
+    text-align: left;
+    padding-left: 105px;
+}
+
+#left-bar {
+    padding: 0;
+    margin: 0;
+    width: 48px;
+    /*height: 100%;*/
+    height: 95px;
+    background-color: #262626;
+}
+
+#left-menu {
+    width: 48px;
+    /*height: 655px;*/
+    list-style: none;
+    position: relative;
+}
+        
+#left-menu .menu-btn {
+    width: 100%;
+    height: 44px;
+    float: left;
+    background-color: #272727;
+    border-top: 1px solid #313131;
+    border-bottom: 1px solid #121212;
+    cursor: pointer;
+}
+        
+#left-menu .menu-btn:hover {
+    background-color: #313131;
+}
+        
+#left-menu .menu-btn.active {
+    border-top: 2px solid #070707;
+    background-color: #151515;
+}
+        
+#left-menu .menu-btn .icon {
+    margin-left: 10px;
+    cursor: pointer;
+    background-image: url("../img/zalo.sprite.png");
+}
+
+#left-menu .conversation-btn .icon {
+    margin-top: 12px;
+    width: 27px;
+    height: 24px;
+    background-position: -152px 0px;
+}
+        
+#left-menu .conversation-btn:hover .icon {
+    background-position: -179px 0px;
+}
+        
+#left-menu .conversation-btn.active .icon {
+    margin-top: 11px;
+    background-position: -206px 0px;
+}
+        
+#left-menu .contacts-btn .icon {
+    margin-top: 9px;
+    width: 27px;
+    height: 26px;     
+    background-position: -152px -24px;
+}
+        
+#left-menu .contacts-btn:hover .icon {
+    background-position: -179px -24px;
+}
+
+#left-menu .contacts-btn.active .icon {
+    margin-top: 8px;
+    background-position: -206px -24px;
+}
+        
+#left-menu .recents-btn .icon {
+    margin-top: 9px;
+    width: 28px;
+    height: 28px;     
+    background-position: -152px -50px;
+}
+        
+#left-menu .recents-btn:hover .icon {
+    background-position: -180px -50px;
+}
+        
+#left-menu .recents-btn.active .icon {
+    background-position: -208px -50px;
+}
+        
+#left-menu .keypad-btn .icon {
+    margin-top: 9px;
+    width: 26px;
+    height: 25px;     
+    background-position: -152px -78px;
+}
+
+#left-menu .keypad-btn:hover .icon {
+    background-position: -179px -78px;
+}
+
+#left-menu .keypad-btn.active .icon {
+    background-position: -206px -78px;
+}
+        
+#left-menu .settings-btn {
+    position: absolute;
+    bottom: 0px;
+    border-radius: 6px;
+}
+
+#left-menu .settings-btn .icon {
+    margin-top: 8px;
+    width: 29px;
+    height: 29px;     
+    background-position: -152px -103px;
+}
+
+#left-menu .settings-btn:hover .icon {
+    background-position: -181px -103px;
+}
+
+#left-menu .settings-btn.active .icon {
+    background-position: -210px -103px;
+}
+
+#middle-bar {
+    width: 248px;
+    min-height: 355px;
+    bottom: 0px;
+    position: absolute;
+    top: 45px;
+    left: 48px;
+}
+
+#contacts {
+    width: 248px;
+    height: 100%;
+    overflow: hidden;
+    min-height: 355px;
+    border-right: 1px solid #bbbbbb;
+    background-color: #e5e5e5;
+    position: relative;
+}
+
+#contacts #search-box {
+    float: left;
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid #bbbbbb;
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+
+#contacts #search-box .left-text-search {
+    width: 8px;
+    height: 30px;
+    margin-left: 9px;
+    margin-top: 4px;
+    line-height: 12px;
+    padding-left: 7px;
+    border-left: 1px solid #a2a2a2;
+    border-top: 1px solid #a2a2a2;
+    border-right: none;
+    border-bottom: 1px solid #a2a2a2;
+    border-radius: 4px;
+    background: white;
+}
+
+#contacts #search-box #search-text{
+    position: relative;
+    top: -32px;
+    left: 5px;
+    height: 32px;
+    line-height: 12px;
+    width: 220px;
+    padding-left: 7px;
+    border-top: 1px solid #a2a2a2;
+    border-bottom: 1px solid #a2a2a2;
+    border-left: none;
+    border-right: none;
+    background: white;
+    color: #adadad;
+
+}
+
+.middle-text-search{
+    color: #adadad;
+}
+
+#contacts #search-box .right-text-search {
+    position: relative;
+    background: white;
+    top: -32px;
+    left: -7px;
+    width: 8px;
+    height: 30px;
+    float: right;
+    border-radius: 4px;
+    border-right: 1px solid #a2a2a2;
+    border-top: 1px solid #a2a2a2;
+    border-left: none;
+    border-bottom: 1px solid #a2a2a2;
+}
+
+#contacts #search-box .remove-btn {
+    position: absolute;
+    right: 15px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    top: 14px;
+    background-image: url("../img/zalo.sprite.png");
+    background-position: 0px -20px;    
+}
+        
+#contacts #search-box .remove-btn:hover {
+    background-position: 0px -35px;    
+}
+
+#contacts .app-status {
+    position: absolute;
+    height: 26px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    /*-moz-opacity: 0.60;
+    opacity: .60;
+    filter: alpha(opacity=60);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);*/    
+    background-color: #adadad;
+    margin-top: 45px;
+    z-index: 999;
+}
+
+#contacts .app-status .name-status{
+    height: 28px;
+    margin-top: 5px;
+}
+
+#contacts .app-status .name-status .status-img{
+    position: relative;
+}
+
+#contacts .app-status .name-status .status-img img{
+    position: absolute;
+}
+
+#contacts .app-status .name-status .status-text{
+    padding-left: 19px;
+    line-height: 18px;
+}
+   
+#contacts #items{
+    width: 248px;
+    min-height: 311px;
+    bottom: 0px;
+    position: absolute;
+    top: 45px;
+}
+
+#contacts #items .slimScrollDiv{
+     height: 100% !important;
+     position: relative;
+}
+
+#contacts #items .text-center-box{
+    float: left;
+    width: 247px !important;
+    height: 100% !important;
+    position: absolute;
+}
+        
+#contacts #items .contact-items {
+    float: left;
+    height: 60px;
+    width: 254px;
+    font-size: 14px;
+    border-bottom: 1px solid #dbdbdb;
+    padding-top: 1px;
+    position: relative;
+    background-color: #f9f9f9;
+}
+       
+#contacts #items .contact-items:hover {
+    background-color: #ebebeb;
+}
+        
+#contacts #items .contact-items.active {
+    background-color: #aae0f7;
+}
+        
+#contacts #items .contact-items .contact-avatar {
+    float: left;
+    margin-left: 3px;
+    height: 60px;
+    width: 60px;
+}
+        
+#contacts #items .contact-items .contact-avatar img {
+    height: 60px;
+    width: 60px;
+}
+    
+#contacts #items .contact-items .contact-info .contact-name {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+        
+#contacts #items .contact-items .contact-info .contact-call {
+    position: absolute;
+    right: 5px;
+    width: 43px;
+    height: 12px;
+    top: 10px;
+    background-image: url("../img/zalo.sprite.png");
+    background-position: -198px -132px;   
+}
+/* notify message*/
+#contacts #items .contact-items .contact-info #notify-message {
+    position: absolute;
+    right: 5px;
+    width: 43px;
+    height: 12px;
+    top: 40px;
+}
+#contacts #items .total-contacts {
+    color: #bebebe;
+    float: left;
+    font-size: 16px;
+    height: 40px;
+    width: 254px;
+    line-height: 40px;
+    background-color: #f9f9f9; 
+}
+
+#contacts #items #contain-items .no-items{
+    display: inline-block;
+    margin-top: 135px;
+}
+
+#contacts #items #contain-items .no-items .no-items-text{
+    font-size: 20px;
+    font-weight: bold;
+    color: #9c9c9c;
+} 
+
+#contacts #items #contain-items .no-items .no-items-img{
+    width: 100px;
+    height: 134px;
+    margin-top: 16px;
+    background-image: url("../img/zalo.sprite.png");
+    background-position: 0 -67px;
+}
+  
+#rightpanel{
+    float: right;
+    background: #262626;
+    position: relative;
+    width: 550px;
+    height: 100%;
+    border-radius: 6px;
+    border: 5px solid #262626;
+    box-shadow: 0 2px 6px #313131;
+    z-index: 20;
+    overflow: hidden;
+    min-height: 400px;
+}
+
+#right-content {
+    position: relative;
+    height: 100% !important;
+    width: 550px !important;
+    overflow: hidden;
+    background: white;
+    border-radius: 6px;
+}
+
+#righttop{
+    height: 45px;
+    position: relative;
+    width: 550px;
+    background: #262626;
+    border-radius: 2px;
+}      
+
+#right-content #no-conversation {
+    width: 550px;
+    min-height: 355px;
+    bottom: 0px;
+    position: absolute;
+    top: 45px;
+}
+
+
+#right-content #no-conversation img {
+    margin-top: 5%; 
+}
+
+#right-content #no-conversation .guide-text {
+    padding-bottom: 7px;
+}
+    
+        
+#conversation-info {
+    height: 90px;
+    width: 550px;
+    z-index: 1;
+}
+        
+        
+#conversation-info .talker-info {
+    height: 75px;
+    position: relative;
+}
+        
+#conversation-info .talker-info div {
+    float: left;
+}
+        
+#conversation-info .talker-info .talker-img .talker-avatar img {
+    margin-left: 10px;
+    margin-top: 10px;
+    height: 60px;
+    width: 60px;
+}
+               
+#conversation-info .talker-info .talker-action .talker-name {
+    font-size: 30px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #fc0025;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+     
+#conversation-info .talker-info .invite-talker {
+    float: right;
+    width: 20px;
+    height: 21px;
+    margin-top: 50px;
+    margin-right: 20px;
+    background: url("../img/zalo.sprite.png");
+    background-position: -152px -167px;
+}
+
+#conversation-info .talker-info .invite-talker:hover {
+    background-position: -172px -167px;
+}
+        
+#conversation-info .conversation-divide {
+    height: 20px;
+    width: 550px;
+    /*margin: 3px auto;*/
+    background: url("../img/zalo.divide.conv.png") center center no-repeat;
+    background-position: center center;
+    background-repeat: no-repeat;
+    /*background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/conversation-divine.png', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/conversation-divine.png', sizingMethod='scale')";*/
+}
+   
+#conversation-box{
+    width: 550px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 44px;
+    top: 130px;
+}
+
+#conversation-box .slimScrollDiv{
+     height: 100% !important;
+     position: relative;
+}
+
+#conversation-box #chatWindow {
+    width: 550px !important;
+    overflow: hidden;
+    height: 100% !important;
+    min-height: 265px;
+}
+
+#conversation-content .conversation-bubble{
+    border: 1px solid #e5e5e5;
+    margin: 5px;
+    overflow: auto;
+}
+
+#chat-editor{
+    height: 45px;
+    width: 550px;
+    position: absolute;
+    bottom: 0;
+    border-left: 1px solid #bbbbbb;
+    border-top: 1px solid #bbbbbb;
+    background-color: #f2f2f2;
+}
+
+#chat-editor div{
+    float: left;
+}
+
+#chat-editor .photo-input{
+    width: 23px;
+    height: 17px;
+    margin: 14px 10px 14px 10px;
+    background-image: url("../img/zalo.sprite.png");
+    background-position: -152px -132px;    
+}
+
+#chat-editor .photo-input:hover{
+    cursor: pointer;
+    background-position: -175px -132px;    
+}
+
+#chat-editor .separate-input {
+    width: 2px;
+    height: 32px;
+    margin-top: 6.5px;
+    background-image: url("../img/zalo.sprite.png");
+    background-position: -239px -0px;    
+}
+
+#chat-editor .sticker-input {
+    width: 18px;
+    height: 18px;
+    margin: 14px 10px 14px 10px;
+    background-image: url("../img/zalo.sprite.png");
+    background-position: -152px -149px;    
+}
+
+#chat-editor .sticker-input:hover {
+    cursor: pointer;
+    background-position: -170px -149px;    
+}
+
+#chat-editor .text-input {
+    position: relative;
+    height: 33px;
+    width: 390px !important;
+    margin-top: 6px;
+}
+
+#chat-editor .text-input .left-text-input {
+    width: 4px;
+    height: 33px;
+    background-image: url("../img/zalo.sprite.png");
+    background-position: 0px -230px; 
+}
+
+#chat-editor .text-input .middle-text-input {
+    float: left;
+    height: 33px;
+    line-height: 12px;
+    width: 382px !important;
+    padding-left: 7px;
+    border-top: 1px solid #a2a2a2;
+    border-bottom: 1px solid #a2a2a2;
+    border-left: none;
+    border-right: none;
+    background-color: #ffffff;
+}
+
+#chat-editor .text-input .right-text-input {
+    width: 4px;
+    height: 33px;
+    float: right;
+    background-image: url("../img/zalo.sprite.png");
+    background-position: -8px -230px; 
+}
+
+#chat-editor .send-btn{
+    margin: 6px 0px 6px 6px;
+}
+
+ul.tabemotion{ 
+    background:#f7f9fa; 
+    box-shadow:0 -20px 5px #eff5f8 inset; 
+    height:24px; 
+    margin:0 -10px 10px; 
+    border-bottom:1px solid #a9c4cf; 
+    padding-top:10px;
+}
+
+ul.tabemotion li{
+    display:block; 
+    float:left; 
+    font-weight:bold; 
+    margin-left:10px;
+}
+
+ul.tabemotion li div{
+    background:#97b7c5; 
+    line-height:23px; 
+    height:23px; 
+    padding:0 10px; 
+    display:block; 
+    float:left; 
+    color:#fff;
+    border:1px 
+    solid #97b7c5;
+}
+
+ul.tabemotion li div:hover{
+    text-decoration:none;
+}
+
+ul.tabemotion li div.current, ul.tabemotion li div:hover{ 
+    background:#fff; 
+    color:#444;
+    border:1px 
+    solid #a9c4cf; 
+    border-bottom:1px 
+    solid #fff;
+}
+
+#contacts_menu{
+    text-align: left;
+    left: 50px;
+    top:47px;
+    width: 150px;
+    height: 100px;
+    padding-top:10px;
+    position: absolute;
+    background-color: #fcfbf7;
+    padding: 0 0 10px;
+    word-break: break-all;
+    border: #070707 solid 3px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+
+#contacts_menu li.divider{
+    height: 2px;
+    width: 100px;
+    margin: 3px auto;
+    background:  #070707;
+}
+
+#contacts_menu > li{
+    float:center;
+    margin:10px 4px;
+    /*position: relative;*/
+}
+
+#contacts_menu > li > a [class*="icon-"]{
+    width:42px;
+    font-size:16px;
+}
+

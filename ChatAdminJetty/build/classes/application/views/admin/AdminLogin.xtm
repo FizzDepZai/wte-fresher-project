@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0114)https://oauth.zaloapp.com/v2/auth?app_id=313417878341342776&redirect_uri=http%3A%2F%2Ffresherchat.zapps.vn%2Flogin -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<title>Admin login</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Loading Bootstrap -->
+		<link href="https://stc.oauth.zaloapp.com/bootstrap/css/bootstrap.css" rel="stylesheet">
+		<!-- Loading Flat UI -->
+		<link href="https://stc.oauth.zaloapp.com/css/flat-ui.css" rel="stylesheet">
+		<link rel="shortcut icon" href="https://stc.oauth.zaloapp.com/images/favicon.ico">				
+	</head>
+	<body style="background-color:#049DE3;">
+		<div class="zalo-oauth-container">
+			<div class="zalo-oauth-logo">
+				<div class="logo"></div>
+			</div>
+			<div class="zalo-oauth-login span5">				
+				<div id="zid_content" class="login-form">
+					<div class="title" style="color:#0000CC; font-size:30px; font-family:arial;"><B>
+						~ Chat Admin ~</B>
+					</div>
+					<div>
+						<!--ZaloID Automatic Embeded Code-->
+						<iframe frameborder="0" height="0" id="zid_ifrLogin" name="ifrLogin" width="0"></iframe>
+						<div>
+						  <form class="form" action="http://localhost:8080/adminlogin" method="post" id="zid_login_form" target="ifrLogin">
+							 <div class="control-group">
+								 <!-- username -->
+								<input id="username" name="username" type="text" size="30" class="login-field" placeholder="Tên đăng nhập / Email / Số điện thoại" tabindex="1">
+							  </div>
+							<div class="control-group">
+								<!-- mật khẩu -->
+								<input id="password" name="password" class="login-field" type="password" placeholder="Mật khẩu" tabindex="2">
+							</div>
+
+							<div class="control-group">
+								<label for="rememberMe" class="checkbox" style="width: 115px; margin-left: 20px; color: #34495E">
+								<span class="icons">
+									<span class="first-icon fui-checkbox-unchecked"></span>
+									<span class="second-icon fui-checkbox-checked"></span></span>
+									<input id="rememberMe" name="longtime" type="checkbox" value="1" tabindex="3"> Duy trì đăng nhập
+								</label>
+								<input type="submit" style="margin-right: 9px;" class="btn btn-login" tabindex="4" value = "Đăng nhập"/>							  
+							</div>																
+						  </form>
+						</div>
+					</div>
+				</div>
+							
+			</div>
+
+			<div class="clearfix"></div>
+			<div class="zalo-oauth-footer">
+				© 2013 Một sản phẩm của Zing
+			</div>
+		</div>
+	
+</body></html>

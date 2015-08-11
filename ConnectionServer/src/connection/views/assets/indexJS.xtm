@@ -1,0 +1,307 @@
+
+<script type="text/javascript">
+
+    // Servers config
+    var CONFIG = {
+        BUSINESS_HOST: "{{=BUSINESS_HOST}}",
+        BUSINESS_PORT: "{{=BUSINESS_PORT}}" ,
+        OAUTH_CODE : "{{=oauthCode}}" ,
+        HOST_RESOURCE : "{{=hostResource}}",
+        CHAT_HOST : "{{=CHAT_HOST}}",
+        CONNECTION_HOST : "{{=CONNECTION_HOST}}"
+    };
+
+
+            var sendImg =false;
+            var currentFriendIndexChat = -1;
+            var totalMessage = 0;
+            var portServer = 0;
+            var connected = true;
+            var run = false;
+            //receiverId la  friendUserId;
+            var receiverId = "";
+ 	    // User profile
+            var userProfile;
+            // List friend profiles
+            var friendListInfo;
+            var friendList = '{{=friendList}}';
+            var arrFriendZaloId= new Array(); //dung cho zalo
+
+                //tao scroll cho friend list va chat window
+           $(function(){$('#friend-list').slimScroll({height: '720px',});});
+           $(function(){$('#chatWindow').slimScroll({height: '100%',});});
+
+
+            $("#chatInput").keyup(function(event){
+                if(event.keyCode == 13){
+                    $("#chatButton").click();
+                }
+            });
+            window.onload = function(){
+                setCookieForAllHosts();
+              // getDisplayName();
+               getFriendList();
+               $("#tinypopover-emoticons").hide();             
+                createConnection();
+               //loadGroupEmotion();
+              // loadEmotions();
+
+            };
+
+            function getDoc(frame) {
+                    var doc = null;
+                    // IE8 cascading access check
+                    try {
+                        if (frame.contentWindow) {
+                            doc = frame.contentWindow.document;
+                        }
+                    } catch(err) {
+                    }
+
+                    if (doc) { // successful getting content
+                        return doc;
+                    }
+                    try { // simply checking may throw in ie8 under ssl or mismatched protocol
+                        doc = frame.contentDocument ? frame.contentDocument : frame.document;
+                    } catch(err) {
+                        // last attempt
+                        doc = frame.document;
+                    }
+                    return doc;
+             }
+
+
+            /*
+            * su kien onclick tren emotion
+            */
+            $(document).ready(function(){
+                            $("#btn-emotion").click(function(){
+                                 $("#tinypopover-emoticons").toggle();
+                            });
+                            
+                           $("#upload-image").change(function() {
+                                sendImg =true;
+                                $("#form-upload").submit(function (e) {
+                                        var formObj = $(this);
+                                        var url = "http://"+CONFIG.BUSINESS_HOST +":"+CONFIG.BUSINESS_PORT+"/upload_image";
+
+                                        if(window.FormData !== undefined){
+                                        var formData = new FormData(this);
+                                        $.ajax({
+                                               type: "POST",
+                                               url: url,
+                                               data: formData, // serializes the form's elements.
+                                               mimeType:"multipart/form-data",
+                                               contentType: false,
+                                               cache: false,
+                                               processData:false,
+                                               success: function(data)
+                                               {
+                                                   if(data!="" && sendImg){
+                                                       chatImage(data);
+                                                       sendImg = false;
+                                                   }else{
+                                                       //error
+                                                        sendImg = false;
+
+                                                    }
+                                               }
+                                             });
+                                        e.preventDefault();// using this page stop being refreshing 
+
+                                        }else{ //use for old browser
+                                                var  iframeId = 'unique' + (new Date().getTime());
+
+                                                    //create an empty iframe
+                                                    var iframe = $('<iframe src="javascript:false;" name="'+iframeId+'" />');
+
+                                                    //hide it
+                                                    iframe.hide();
+
+                                                    //set form target to iframe
+                                                    formObj.attr('target',iframeId);
+
+                                                    //Add iframe to body
+                                                    iframe.appendTo('body');
+                                                    iframe.load(function(e)
+                                                    {
+                                                        var doc = getDoc(iframe[0]);
+                                                        var docRoot = doc.body ? doc.body : doc.documentElement;
+                                                        var data = docRoot.innerHTML;
+                                                        //data is returned from server.
+                                                            if(data!="" && sendImg ){
+                                                                chatImage(data);
+                                                                  sendImg = false;
+                                                           }else{
+                                                             //error
+                                                                  sendImg = false;
+
+                                                             }
+                                                    });                                             
+                                        }
+                                       
+                                  });
+
+
+                                //goi den ham upload image
+                                $("#form-upload").submit(); //Submit the form
+
+                                   
+                               });
+                    $("ul#left-menu  li").click(function(){
+                        var profileId = $("ul#left-menu> :first-child").attr("id");
+                        var clickedID = $(this).attr("id");
+                        if( profileId != clickedID){
+                             $("#contacts_menu").hide();
+                        }
+
+                    });
+                    $("#btn-profile").click(function(){
+                        if($("#contacts_menu").hasClass("hidden")){
+                            $("#contacts_menu").removeClass("hidden");
+                         }
+                        $("#contacts_menu").toggle();
+
+                    });             
+              });
+
+            
+
+          
+        //checkOnline 20s 1 lan 
+        setInterval(function(){
+            checkFriendOnline();
+        },20000);  
+
+        function changeColorOver(indexFriend){
+             var colorval = $('#friend'+indexFriend).css("background-color");
+                //background cua item friend chua duoc set hoac la transparent thi se duoc chuyen thanh mau xanh 
+            if(colorval == "transparent" || colorval == undefined){
+                $('#friend'+indexFriend).css("background-color","#0490cc");
+            }
+        }
+
+        function changeColorOut(indexFriend){
+             var colorval = $('#friend'+indexFriend).css("background-color");
+             //rbg cua color #0490cc , mau dung khi hover 
+            if(colorval == 'rgb(4, 144, 204)'){
+                $('#friend'+indexFriend).css("background-color","transparent");
+            }
+        }
+        
+        function openUploadImage(){
+            $('#upload-image').click();
+        }
+
+      // Send notify to all hosts to set cookie and create login session
+            function setCookieForAllHosts() {
+            // Set cookie to business server
+            $.ajax({
+                        type: "POST",
+                        async: true,
+                        data: {oauthCode: '{{=oauthCode}}'},
+                        url: "http://"+CONFIG.BUSINESS_HOST +":"+CONFIG.BUSINESS_PORT+"/login",
+                        success: (function(response) {
+                            if (response !== 'undefined'){
+
+                            }else{
+                                //alert("Ok!");
+                            }
+                        }),
+                        error: (function(error) {
+                            alert("Error!!! Set cookie to business server");
+                    })
+                });
+
+            // Set cookie to chat server
+            $.ajax({
+                        type: "POST",
+                        async: true,
+                        data: {oauthCode: '{{=oauthCode}}'},
+                        url: "http://"+CONFIG.CHAT_HOST+":"+"8001"+"/login",
+                        success: (function(response) {
+                            if (response !== 'undefined'){
+
+                            }else{
+                                //alert("Ok!");
+                            }
+                        }),
+                        error: (function(error) {
+                            alert("Error!!! Set cookie to chat server");
+                    })
+                });
+            }
+
+            // Notify logout to delete session 
+            function setLogout() {
+                // Set cookie to business server
+                $.ajax({
+                            type: "POST",
+                            async: true,
+                            data: {userId:'{{=userId}}', oauthCode: '{{=oauthCode}}'},
+                            url: "http://"+CONFIG.BUSINESS_HOST +":"+CONFIG.BUSINESS_PORT+"/logout",
+                            success: (function(response) {
+                                if (response !== 'undefined'){
+
+                                }else{
+                                }
+                            }),
+                            error: (function(error) {
+                                //alert("Error!!! Set logout");
+                        })
+                    });
+            }     
+    
+            // Display avatar and name in main page
+            (function displayProfile(userId) {
+            $.ajax({
+                        type: "POST",
+                        async: true,
+                        data: {userId:'{{=userId}}', oauthCode: '{{=oauthCode}}'},
+                        url: "http://fresherchat.zapps.vn:"+{{=BUSINESS_PORT}}+"/profile",
+                        success: (function(response) {
+                            if (response !== 'undefined') {
+                                // set display name
+                                $('#name').text(response.displayName);
+                                $('#displayNameViews').text(response.displayName);
+                                //change image avatar of user
+                                $("#avatar").attr('src', response.avatar);
+                                $("#headerAvartar").attr('src', response.avatar);
+
+                                // set user name
+                                $('#uname').text(response.userName);
+                                // set birthday
+                                var date = new Date(response.birthDate*1000);
+                                var birthday = date.getDay() + " tháng " + date.getMonth() + " năm " + date.getFullYear();
+                                $('#birth').text(birthday);
+                                // set gender
+                                // Gender Khác Nam Nữ Không xác định
+                                var gender = "";
+                                switch (response.userGender.toString()) {
+                                    case "UGEN_Undef":
+                                        gender = "Không xác định";
+                                        break;
+                                    case "UGEN_Male":
+                                        gender = "Nam";
+                                        break;
+                                    case "UGEN_Female":
+                                        gender = "Nữ";
+                                        break;
+                                    case "UGEN_Other":
+                                        gender = "Khác";
+                                        break;
+                                }
+                                $('#sex').text(gender);
+                            } else {
+                                alert("Error1!!! set profile");
+                            }
+                        }),
+                        error: (function(error) {
+                            alert("Error!!! set profile");
+                    })
+                });
+        })();
+
+
+
+        </script>

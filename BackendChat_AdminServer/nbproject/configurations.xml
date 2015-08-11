@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="90">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>src/ini/BackEndServer.h</itemPath>
+      <itemPath>src/ini/thrift/ChatProject.h</itemPath>
+      <itemPath>src/ini/Config.h</itemPath>
+      <itemPath>src/ini/DataStructure.h</itemPath>
+      <itemPath>src/ini/DataStructureNode.h</itemPath>
+      <itemPath>src/ini/Database.h</itemPath>
+      <itemPath>src/ini/EmotionItemIdGen.h</itemPath>
+      <itemPath>src/ini/GroupEmotionItemIdGen.h</itemPath>
+      <itemPath>src/ini/JobWorker.h</itemPath>
+      <itemPath>src/ini/JobWorkerNode.h</itemPath>
+      <itemPath>src/ini/KeyGenerate.h</itemPath>
+      <itemPath>src/ini/LinkListId.h</itemPath>
+      <itemPath>src/ini/LinkedListDatabase.h</itemPath>
+      <itemPath>src/ini/LinkedListJobWorker.h</itemPath>
+      <itemPath>src/ini/LinkedListWriteToDBWorker.h</itemPath>
+      <itemPath>src/ini/Node.h</itemPath>
+      <itemPath>ServerLog.h</itemPath>
+      <itemPath>src/ini/ServerManagement.h</itemPath>
+      <itemPath>src/ini/TestSinhVien.h</itemPath>
+      <itemPath>src/ini/WorkNotification.h</itemPath>
+      <itemPath>src/ini/Workers.h</itemPath>
+      <itemPath>src/ini/WriteToDBWorker.h</itemPath>
+      <itemPath>src/ini/WriteToDBWorkerNode.h</itemPath>
+      <itemPath>src/ini/WriteToDBWorkers.h</itemPath>
+      <itemPath>src/ini/thrift/chatProject_types.h</itemPath>
+      <itemPath>src/ini/core</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>src/BackEndServer.cpp</itemPath>
+      <itemPath>src/ini/thrift/ChatProject.cpp</itemPath>
+      <itemPath>src/ChatProjectMain.cpp</itemPath>
+      <itemPath>src/DataStructure.cpp</itemPath>
+      <itemPath>src/Database.cpp</itemPath>
+      <itemPath>src/EmotionItemIdGen.cpp</itemPath>
+      <itemPath>src/ini/GroupEmotionItemIdGen.cpp</itemPath>
+      <itemPath>src/JobWorker.cpp</itemPath>
+      <itemPath>src/KeyGenerate.cpp</itemPath>
+      <itemPath>src/LinkListId.cpp</itemPath>
+      <itemPath>src/LinkedListDatabase.cpp</itemPath>
+      <itemPath>src/LinkedListJobWorker.cpp</itemPath>
+      <itemPath>src/LinkedListWriteToDBWorker.cpp</itemPath>
+      <itemPath>src/MySerializer.hpp</itemPath>
+      <itemPath>src/ServerLog.cpp</itemPath>
+      <itemPath>src/ServerManagement.cpp</itemPath>
+      <itemPath>src/Test.cpp</itemPath>
+      <itemPath>src/TestSinhVien.cpp</itemPath>
+      <itemPath>src/ThriftTypesTests.cpp</itemPath>
+      <itemPath>src/WorkNotification.cpp</itemPath>
+      <itemPath>src/Workers.cpp</itemPath>
+      <itemPath>src/WriteToDBWorker.cpp</itemPath>
+      <itemPath>src/WriteToDBWorkers.cpp</itemPath>
+      <itemPath>src/ini/thrift/chatProject_constants.cpp</itemPath>
+      <itemPath>src/ini/thrift/chatProject_types.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>KClib</Elem>
+    <Elem>Thriftlib</Elem>
+    <Elem>Pocolib</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <standard>4</standard>
+          <incDir>
+            <pElem>KClib</pElem>
+            <pElem>Thriftlib</pElem>
+            <pElem>Pocolib</pElem>
+            <pElem>src/ini/jsoncpp</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>_GLIBCXX_CSIGNAL</Elem>
+          </preprocessorList>
+        </ccTool>
+        <linkerTool>
+          <linkerAddLib>
+            <pElem>KClib</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerLibLibItem>thrift</linkerLibLibItem>
+            <linkerLibLibItem>thriftz</linkerLibLibItem>
+            <linkerLibLibItem>kyotocabinet</linkerLibLibItem>
+            <linkerLibStdlibItem>PosixThreads</linkerLibStdlibItem>
+            <linkerLibLibItem>thriftnb</linkerLibLibItem>
+            <linkerOptionItem>`pkg-config --libs libevent`</linkerOptionItem>
+            <linkerOptionItem>`pkg-config --libs libevent_pthreads`</linkerOptionItem>
+            <linkerOptionItem>-dynamic</linkerOptionItem>
+            <linkerOptionItem>`pkg-config --libs zlib`</linkerOptionItem>
+            <linkerOptionItem>-lz -lstdc++ -lrt -lm -lc</linkerOptionItem>
+            <linkerLibLibItem>PocoFoundation</linkerLibLibItem>
+            <linkerLibLibItem>PocoFoundationd</linkerLibLibItem>
+            <linkerLibLibItem>PocoUtil</linkerLibLibItem>
+            <linkerLibLibItem>PocoUtild</linkerLibLibItem>
+            <linkerOptionItem>-std=gnu++11</linkerOptionItem>
+            <linkerOptionItem>-std=c++11</linkerOptionItem>
+            <linkerLibFileItem>jsoncpplibs/libjson_linux-gcc-4.8_libmt.a</linkerLibFileItem>
+            <linkerLibFileItem>jsoncpplibs/libjson_linux-gcc-4.8_libmt.so</linkerLibFileItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="ServerLog.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/BackEndServer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/ChatProjectMain.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/DataStructure.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Database.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/EmotionItemIdGen.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/JobWorker.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/KeyGenerate.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/LinkListId.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/LinkedListDatabase.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/LinkedListJobWorker.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/LinkedListWriteToDBWorker.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/MySerializer.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ServerLog.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/ServerManagement.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Test.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/TestSinhVien.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/ThriftTypesTests.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/WorkNotification.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Workers.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/WriteToDBWorker.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/WriteToDBWorkers.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/ini/BackEndServer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/Config.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/DataStructure.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/DataStructureNode.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/Database.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/EmotionItemIdGen.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/GroupEmotionItemIdGen.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/ini/GroupEmotionItemIdGen.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/JobWorker.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/JobWorkerNode.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/KeyGenerate.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/LinkListId.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/LinkedListDatabase.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/LinkedListJobWorker.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/LinkedListWriteToDBWorker.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="src/ini/Node.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/ServerManagement.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/TestSinhVien.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/WorkNotification.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/Workers.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/WriteToDBWorker.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/WriteToDBWorkerNode.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/WriteToDBWorkers.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/core" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/thrift/ChatProject.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/ini/thrift/ChatProject.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/thrift/chatProject_constants.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/ini/thrift/chatProject_types.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/ini/thrift/chatProject_types.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+      <item path="ServerLog.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/BackEndServer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/ChatProjectMain.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/DataStructure.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Database.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/EmotionItemIdGen.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/JobWorker.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/KeyGenerate.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/LinkListId.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/LinkedListDatabase.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/LinkedListJobWorker.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/LinkedListWriteToDBWorker.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/MySerializer.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ServerLog.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/ServerManagement.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Test.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/TestSinhVien.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/ThriftTypesTests.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/WorkNotification.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Workers.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/WriteToDBWorker.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/WriteToDBWorkers.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/ini/BackEndServer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/Config.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/DataStructure.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/DataStructureNode.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/Database.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/EmotionItemIdGen.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/GroupEmotionItemIdGen.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/ini/GroupEmotionItemIdGen.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/JobWorker.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/JobWorkerNode.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/KeyGenerate.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/LinkListId.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/LinkedListDatabase.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/LinkedListJobWorker.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/LinkedListWriteToDBWorker.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="src/ini/Node.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/ServerManagement.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/TestSinhVien.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/WorkNotification.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/Workers.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/WriteToDBWorker.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/WriteToDBWorkerNode.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/WriteToDBWorkers.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/core" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/thrift/ChatProject.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/ini/thrift/ChatProject.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/ini/thrift/chatProject_constants.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/ini/thrift/chatProject_types.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/ini/thrift/chatProject_types.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

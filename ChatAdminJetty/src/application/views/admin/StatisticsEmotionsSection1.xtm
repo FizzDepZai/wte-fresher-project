@@ -1,0 +1,63 @@
+{{#MemeSmile}}
+    <!--<div>-->
+        <label for="MemeSmileEmotionsSeclection">Meme Smile Emotions</label>
+        <select id="MemeSmileEmotionsSeclection"; onChange="changeMemeSetBackground()" name="MemeSmileType">
+            <option style=" height: 128px; background-repeat: no-repeat; background-position: center; background-image: url({{=host}}/emotions-image/theme1/item1.png)" value="1">item1</option>
+            <option style=" height: 128px; background-repeat: no-repeat; background-position: center; background-image: url({{=host}}/emotions-image/theme1/item2.png)" value="2">item2</option>
+            <option style=" height: 128px; background-repeat: no-repeat; background-position: center; background-image: url({{=host}}/emotions-image/theme1/item3.png)" value="3">item3</option>
+            <option style=" height: 128px; background-repeat: no-repeat; background-position: center; background-image: url({{=host}}/emotions-image/theme1/item4.png)" value="4">item4</option>
+            <option style=" height: 128px; background-repeat: no-repeat; background-position: center; background-image: url({{=host}}/emotions-image/theme1/item5.png)" value="5">item5</option>
+            <option style=" height: 128px; background-repeat: no-repeat; background-position: center; background-image: url({{=host}}/emotions-image/theme1/item6.png)" value="6">item6</option>
+            <option style=" height: 128px; background-repeat: no-repeat; background-position: center; background-image: url({{=host}}/emotions-image/theme1/item7.png)" value="7">item7</option>
+            <option style=" height: 128px; background-repeat: no-repeat; background-position: center; background-image: url({{=host}}/emotions-image/theme1/item8.png)" value="8">item8</option>
+            <option style=" height: 128px; background-repeat: no-repeat; background-position: center; background-image: url({{=host}}/emotions-image/theme1/item9.png)" value="9">item9</option>
+            <option style=" height: 128px; background-repeat: no-repeat; background-position: center; background-image: url({{=host}}/emotions-image/theme1/item10.png)" value="10">item10</option>
+            <option style=" height: 128px; background-repeat: no-repeat; background-position: center; background-image: url({{=host}}/emotions-image/theme1/item11.png)" value="11">item11</option>
+            <option style=" height: 128px; background-repeat: no-repeat; background-position: center; background-image: url({{=host}}/emotions-image/theme1/item12.png)" value="12">item12</option>
+            <option style=" height: 128px; background-repeat: no-repeat; background-position: center; background-image: url({{=host}}/emotions-image/theme1/item13.png)" value="13">item13</option>
+            <option style=" height: 128px; background-repeat: no-repeat; background-position: center; background-image: url({{=host}}/emotions-image/theme1/item14.png)" value="14">item14</option>
+            <option style=" height: 128px; background-repeat: no-repeat; background-position: center; background-image: url({{=host}}/emotions-image/theme1/item15.png)" value="15">item15</option>
+            <option style=" height: 128px; background-repeat: no-repeat; background-position: center; background-image: url({{=host}}/emotions-image/theme1/item16.png)" value="16">item16</option>
+            <option style=" height: 128px; background-repeat: no-repeat; background-position: center; background-image: url({{=host}}/emotions-image/theme1/item17.png)" value="17">item17</option>
+            <option style=" height: 128px; background-repeat: no-repeat; background-position: center; background-image: url({{=host}}/emotions-image/theme1/item18.png)" value="18">item18</option>
+            <option style=" height: 128px; background-repeat: no-repeat; background-position: center; background-image: url({{=host}}/emotions-image/theme1/item19.png)" value="19">item19</option>
+            <option style=" height: 128px; background-repeat: no-repeat; background-position: center; background-image: url({{=host}}/emotions-image/theme1/item20.png)" value="20">item20</option>
+            <option style=" height: 128px; background-repeat: no-repeat; background-position: center; background-image: url({{=host}}/emotions-image/theme1/item21.png)" value="21">item21</option>
+            <option style=" height: 128px; background-repeat: no-repeat; background-position: center; background-image: url({{=host}}/emotions-image/theme1/item22.png)" value="22">item22</option>
+            <option style=" height: 128px; background-repeat: no-repeat; background-position: center; background-image: url({{=host}}/emotions-image/theme1/item23.png)" value="23">item23</option>
+            <option style=" height: 128px; background-repeat: no-repeat; background-position: center; background-image: url({{=host}}/emotions-image/theme1/item24.png)" value="24">item24</option>
+            <option style=" height: 128px; background-repeat: no-repeat; background-position: center; background-image: url({{=host}}/emotions-image/theme1/item25.png)" value="25">item25</option>
+            <option style=" height: 128px; background-repeat: no-repeat; background-position: center; background-image: url({{=host}}/emotions-image/theme1/item26.png)" value="26">item26</option>
+            <option style=" height: 128px; background-repeat: no-repeat; background-position: center; background-image: url({{=host}}/emotions-image/theme1/item27.png)" value="27">item27</option>
+            <option style=" height: 128px; background-repeat: no-repeat; background-position: center; background-image: url({{=host}}/emotions-image/theme1/item28.png)" value="28">item28</option>
+            <option style=" height: 128px; background-repeat: no-repeat; background-position: center; background-image: url({{=host}}/emotions-image/theme1/item29.png)" value="29">item29</option>
+            <option style=" height: 128px; background-repeat: no-repeat; background-position: center; background-image: url({{=host}}/emotions-image/theme1/item30.png)" value="30">item30</option>
+            <option style=" height: 128px; background-repeat: no-repeat; background-position: center; background-image: url({{=host}}/emotions-image/theme1/item31.png)" value="31">item31</option>
+            <option style=" height: 128px; background-repeat: no-repeat; background-position: center; background-image: url({{=host}}/emotions-image/theme1/item32.png)" value="32">item32</option>
+            <option style=" height: 128px; background-repeat: no-repeat; background-position: center; background-image: url({{=host}}/emotions-image/theme1/item33.png)" value="33">item33</option>
+            <option style=" height: 128px; background-repeat: no-repeat; background-position: center; background-image: url({{=host}}/emotions-image/theme1/item34.png)" value="34">item34</option>
+            <option style=" height: 128px; background-repeat: no-repeat; background-position: center; background-image: url({{=host}}/emotions-image/theme1/item35.png)" value="35">item35</option>
+            <option selected hidden"></option>
+        </select>
+    <!--</div>-->
+        
+{{/MemeSmile}}
+    
+{{#ChibiGirls}}
+     <!--<div>-->
+        <label for="ChibiGirlSelection">Chibi Girl Emotions</label>
+        <select id="ChibiGirlSelection" onChange="changeChibiSetBackground()" name="ChibiGirlType">
+            <option style=" height: 55px; background-repeat: no-repeat; background-position: center; background-image: url({{=host}}/emotions-image/theme2/item1.gif)" value="1">item1</option>
+            <option style=" height: 55px; background-repeat: no-repeat; background-position: center; background-image: url({{=host}}/emotions-image/theme2/item2.gif)" value="2">item2</option>
+            <option style=" height: 55px; background-repeat: no-repeat; background-position: center; background-image: url({{=host}}/emotions-image/theme2/item3.gif)" value="3">item3</option>
+            <option style=" height: 55px; background-repeat: no-repeat; background-position: center; background-image: url({{=host}}/emotions-image/theme2/item4.gif)" value="4">item4</option>
+            <option style=" height: 55px; background-repeat: no-repeat; background-position: center; background-image: url({{=host}}/emotions-image/theme2/item5.gif)" value="5">item5</option>
+            <option style=" height: 55px; background-repeat: no-repeat; background-position: center; background-image: url({{=host}}/emotions-image/theme2/item6.gif)" value="6">item6</option>
+            <option style=" height: 55px; background-repeat: no-repeat; background-position: center; background-image: url({{=host}}/emotions-image/theme2/item7.gif)" value="7">item7</option>
+            <option style=" height: 55px; background-repeat: no-repeat; background-position: center; background-image: url({{=host}}/emotions-image/theme2/item8.gif)" value="8">item8</option>
+            <option style=" height: 55px; background-repeat: no-repeat; background-position: center; background-image: url({{=host}}/emotions-image/theme2/item9.gif)" value="9">item9</option>
+            <option style=" height: 55px; background-repeat: no-repeat; background-position: center; background-image: url({{=host}}/emotions-image/theme2/item10.gif)" value="10">item10</option>
+            <option selected hidden"></option>
+        </select>
+    <!--</div>-->
+{{/ChibiGirls}}

@@ -1,0 +1,105 @@
+<html>
+    <head>
+      <title>Emotions statistics</title>
+    </head>
+    <body>
+        <div id="main-content" class="clearfix">
+            <!-- Path title -->
+            <div id="breadcrumbs">
+                <ul class="breadcrumb">
+                    <li><i class="icon-home"></i> <a href="#">Home</a><span class="divider"><i class="icon-angle-right"></i></span></li>
+                    <li class="active">Emotions statistics</li>
+                </ul><!--.breadcrumb-->
+
+                <div id="nav-search">
+                    <form class="form-search">
+                        <span class="input-icon">
+                            <input autocomplete="off" id="nav-search-input" type="text" class="input-small search-query" placeholder="Search ...">
+                            <i id="nav-search-icon" class="icon-search"></i>
+                        </span>
+                    </form>
+                </div><!--#nav-search-->
+            </div><!--#breadcrumbs-->
+            
+            
+            <div class="selection-statistics" id="InputChartDraw"><!--implement-->
+                <form action="http://localhost:8080/StatisticsEmotion{{SetType}}" method="get">
+                <!-- Chose date -->
+                <!--<div class="row-fluid">-->
+                    <label for="form-field-select-3" >Statistic by</label>
+                    <select id="form-field-select-3" name = "period">
+                        <option class="frm_slc" value=1>Day</option>
+                        <option class="frm_slc" value=2>Week</option>
+                        <option class="frm_slc" value=3>Month</option>
+                        <option class="frm_slc" value=4>Year</option>
+                    </select>
+                <!--</div>-->
+                <!--Choose Emotions set/type-->
+                <!--<div class="">--><!--implement-->
+                    <label for="Sets-or-types">Emotion Sets/Type</label>
+                    <select id="Sets-or-types" name = "setType">
+                        <option {{MemeSelected}} value="1">Meme Smile</option>
+                        <option {{GirlChibiSelected}} value="2">Girl Chibi</option>
+                    </select>
+                <!--</div>-->
+                <!--show the selection of emotion list-->
+                {{Section1}}
+                <!--draw the chart-->
+                {{Section2}}
+                
+                <input type="submit" value="View Chart">
+                </form>
+                <button onclick = "moveToMemeSmile()">View Meme Emotions</button>
+                <button onclick = "moveToChibiGirl()">View Chibi Emotions</button>
+            </div>
+            <div class="hr hr8 hr-dotted"></div>
+            <!-- Chart -->
+            <div id="chart_div" style="width: 1000px; height: 600px;"></div>
+
+            </div>
+        </div>
+    </body>
+    {{#Section3}}
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript"><!--draw chart function-->
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+    /*draw the chart*/  
+    function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Date', 'Number of use'],
+          {{DataToDrawChart}}
+        ]);
+
+        var options = {
+          title: '{{RoomOrEmotion}} Statistics',
+          hAxis: {title: 'WTE Roomhttps://www.facebook.com/', titleTextStyle: {color: 'red'}}
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+      </script>
+      {{/Section3}}
+      <script>
+      //chuyen trang khi click
+      function moveToMemeSmile(){
+          window.location= "http://localhost:8080/StatisticsEmotion/MemeSmile";
+      }
+      function moveToChibiGirl(){
+          window.location= "http://localhost:8080/StatisticsEmotion/ChibiGirl";
+      }
+      function changeMemeSetBackground(){
+          console.log("changeBackground");
+          var x = document.getElementById("MemeSmileEmotionsSeclection");
+          var y = document.getElementById("MemeSmileEmotionsSeclection").options;
+          x.setAttribute("style", y[x.selectedIndex].getAttribute("style"));
+      }
+      function changeChibiSetBackground(){
+          console.log("changeChibiBackground");
+          var x = document.getElementById("ChibiGirlSelection");
+          var y = document.getElementById("ChibiGirlSelection").options;
+          x.setAttribute("style", y[x.selectedIndex].getAttribute("style"));
+      }
+    </script>
+</html>

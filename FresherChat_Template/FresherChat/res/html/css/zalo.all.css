@@ -1,0 +1,191 @@
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, ruby, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video, button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    outline: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+input[type=text]::-ms-clear { display: none; }
+
+body
+{
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #404040;
+    width: 100%;
+    height: 100%;
+}
+
+*:focus { 
+	outline: none; 
+}
+
+input {
+    cursor: text;
+}
+
+button:active:hover, button:focus {
+    border: 1px solid transparent;
+    padding: 0 10px;
+    outline:  none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.hidden {
+    display: none !important;    
+}
+.show {
+    display: block;
+}
+.cb {
+    clear: both;
+}
+
+.left-float {
+    float: left;
+}
+
+.right-float {
+    float: right;
+}
+
+.btn {
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: transparent;
+}
+
+.btn-primary {
+    width: 105px;
+    height: 41px;
+    line-height: 41px;
+    background-image: url("./img/zalo.btn.png");/*res:IDR_IMG_ZALO_BTN */
+    background-color: transparent;
+}
+
+.btn-primary:hover {
+    background-position: -106px 0;
+}
+
+.btn-primary:active, .btn-primary:focus, .btn-primary:active:hover {
+    background-position: -212px 0;
+}
+
+.btn-secondary {
+    width: 94px;
+    height: 31px;
+    line-height: 31px;
+    font-size: 14px;
+    background-image: url("./img/zalo.btn.png");/*res:IDR_IMG_ZALO_BTN */
+    background-position: 0px -42px;
+}
+
+.btn-secondary:hover {
+    background-position: -95px -42px;
+}
+
+.btn-secondary:active, .btn-secondary:focus, .btn-secondary:active:hover {
+    background-position: -190px -42px;
+}
+
+.btn-tertiary {
+    width: 64px;
+    height: 31px;
+    line-height: 31px;
+    font-size: 14px;
+    background-image: url("./img/zalo.btn.png");/*res:IDR_IMG_ZALO_BTN */
+    background-color: transparent;
+    background-position: 0px -74px;
+}
+
+.btn-tertiary:hover {
+    background-position: -65px -74px;
+}
+
+.btn-tertiary:active, .btn-tertiary:focus, .btn-tertiary:active:hover {
+    background-position: -130px -74px;
+}
+
+.btn-quaternary {
+    width: 109px;
+    height: 31px;
+    line-height: 31px;
+    font-size: 14px;
+    background-image: url("./img/zalo.btn.png");/*res:IDR_IMG_ZALO_BTN */
+    background-position: 0px -106px;
+}
+
+.btn-quaternary:hover {
+    background-position: -110px -106px;
+}
+
+.btn-quaternary:active, .btn-quaternary:focus, .btn-quaternary:active:hover {
+   background-position: -220px -106px;  
+}
+
+
+.btn-quaternary.disabled {
+    background-position: -330px -106px;
+    cursor: default;
+}
+
+.btn-quaternary.disabled:active,  .btn-quaternary.disabled:focus, .btn-quaternary.disabled:active:hover{
+    background-position: -330px -106px!important;
+}
+
+.btn-quinary {
+    width: 60px;
+    height: 33px;
+    line-height: 33px;
+    font-size: 12px;
+    line-height: 33px;
+    background-image: url("../img/zalo.btn.png");/*res:IDR_IMG_ZALO_BTN */
+    background-position: 0px -138px;
+}
+
+.btn-quinary:hover {
+    background-position: -61px -138px;
+}
+
+.btn-quinary:active, .btn-quinary:focus, .btn-quinary:active:hover {
+   background-position: -122px -138px;  
+}
+
+.btn-quinary.disable {
+    color: #b2b2b2;
+    cursor: default!important;
+}
+
+.btn-quinary.disable:hover {
+    background-position: 0px -138px!important;
+}
+
+.btn-quinary.disable:active, .btn-quinary.disable:focus, .btn-quinary.disable:active:hover {
+   background-position: 0px -138px!important; 
+}
+

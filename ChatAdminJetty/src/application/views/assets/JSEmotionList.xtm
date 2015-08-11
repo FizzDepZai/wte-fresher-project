@@ -1,0 +1,139 @@
+<!-- page specific plugin scripts -->
+
+<script type="text/javascript" src="https://dl.dropboxusercontent.com/u/82516277/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://dl.dropboxusercontent.com/u/82516277/js/jquery.dataTables.bootstrap.js"></script>
+<script type="text/javascript" src= "https://dl.dropboxusercontent.com/u/82516277/js/uncompressed/bootbox.js"></script>
+<script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+
+<!-- inline scripts related to this page -->
+
+
+<script type="text/javascript">
+
+    $(function() {
+// delete row in table
+       
+        $("button.delete").on('click', function() {
+            var rowDelete = this;
+            var emotionId = $(this).attr('id');
+            bootbox.confirm("Are you delete this emotion?", function(result) {
+                if (result) {
+                    $.ajax({
+                        type: "POST",
+                        url: "emotion/delete",
+                        data: { id: emotionId, groupId: {{groupIdJS}} },
+                        success: function(result) {
+                            if (result == "false") {
+                                alert('Error when delete' + result);
+                            }else{
+                                $(rowDelete).closest('tr').find('td').fadeOut(1000,
+                               function() {
+                                   $(rowDelete).parents('tr:first').remove();
+                               });
+                            }
+                        }
+                    });
+
+
+                   
+                    return true;
+                }
+            });
+        });
+
+        //sort on table
+        var oTable1 = $('#table_report').dataTable({
+            "aoColumns": [
+                {"bSortable": false},
+                null, null, null,
+                {"bSortable": false}
+            ]});
+
+
+        //checked row in table
+        $('table th input:checkbox').on('click', function() {
+            var that = this;
+            $(this).closest('table').find('tr > td:first-child input:checkbox')
+                    .each(function() {
+                        this.checked = that.checked;
+                        $(this).closest('tr').toggleClass('selected');
+                    });
+
+        });
+
+        $('[data-rel=tooltip]').tooltip();
+
+        //dialog confirm delete
+        $("#bootbox-confirm").on('click', function() {
+            bootbox.confirm("Are you delete group emotion?", function(result) {
+                if (result) {
+                $.ajax({
+                        type: "POST",
+                        url: "groupEmotion/delete",
+                        data: {groupId: {{groupIdJS}} },
+                        success: function(result) {
+                            if (result == "false") {
+                                alert('Error when delete' + result);
+                            }else{
+                            //notify delete sucess
+                              bootbox.alert("Delete completed!");
+                            }
+                        }
+                    });
+
+
+
+                }
+            });
+        });
+
+
+
+
+        var new_dialog = function(type, row) {
+            var dlg = $("#dialog-form").clone();
+            type = type || 'Create';
+
+
+
+            var config = {
+                autoOpen: true,
+                height: 350,
+                width: 500,
+                modal: true,
+                buttons: {
+                    "Submit emotion image": save_data,
+                    "Cancel": function() {
+                        dlg.dialog("close");
+                    }
+                },
+                close: function() {
+                    dlg.remove();
+                }
+
+            };
+            dlg.dialog(config);
+            //create template input image
+
+
+
+
+            function save_data() {
+                // var fileList = $("#id-input-file-3");
+                dlg.dialog("close");
+
+            }
+
+
+        };
+            
+
+      
+      
+        $("#add-emotion").click(new_dialog);
+
+
+
+    });
+
+</script>

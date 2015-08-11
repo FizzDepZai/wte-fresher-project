@@ -1,0 +1,39 @@
+<!-- page specific plugin scripts -->
+
+
+
+
+
+
+
+    <!-- inline scripts related to this page -->
+
+    <script type="text/javascript">
+        $(function() {
+
+
+
+
+
+            $('table th input:checkbox').on('click', function() {
+                var that = this;
+                $(this).closest('table').find('tr > td:first-child input:checkbox')
+                        .each(function() {
+                            this.checked = that.checked;
+                            $(this).closest('tr').toggleClass('selected');
+                        });
+
+            });
+
+            $('[data-rel=tooltip]').tooltip();
+            
+            $("#bootbox-confirm").on('click', function() {
+			bootbox.confirm("Are you delete this user?", function(result) {
+				if(result) {
+					bootbox.alert("Delete completed!");
+				}
+			});
+		});
+        })
+
+    </script>

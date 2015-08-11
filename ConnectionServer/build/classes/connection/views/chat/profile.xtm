@@ -1,0 +1,270 @@
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Zalo</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- basic styles -->
+
+   <link href="{{hostResource}}/assets/css/bootstrap.css" rel="stylesheet" />
+        <link href="{{hostResource}}/assets/css/bootstrap-responsive.css" rel="stylesheet" />
+        <link rel="stylesheet" href="{{hostResource}}/assets/css/font-awesome.css" />
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+        <!--[if IE 7]>
+        <![endif]-->
+        <!-- page specific plugin styles -->
+        <!-- ace styles -->
+        <link rel="stylesheet" href="{{hostResource}}/assets/css/ace.css" />
+        <link rel="stylesheet" href="{{hostResource}}/assets/css/ace-responsive.css" />
+        <link rel="stylesheet" href="{{hostResource}}/assets/css/ace-skins.css" />
+
+        <!-- css all -->
+        <link href="{{hostResource}}/css/zalo.all.css" rel="stylesheet" type="text/css" />
+        <!-- css app -->
+        <link href="{{hostResource}}/css/zalo.app.css" rel="stylesheet" type="text/css" />
+
+        <style>
+        body {
+            margin:0px 0px; padding:0px;
+            text-align:center;
+        }
+        #dialog-form {
+            display: none;
+        }
+        #chatWindow{
+            height:500px;
+        }
+        #chat-box {
+            position: absolute;
+            height: 200px;
+            width: 800px;
+            margin: -250px 0 0 -400px;
+            top: 50%;
+            left: 50%;
+        }
+        #avatar {
+            border:5px solid white;
+            width: 75px;
+            height: 75px;
+        }
+        #profile-header{
+            width: 800px;
+            height: 100px;
+        }
+
+        #avatar-wrap {
+            position: absolute;
+            width: 85px;
+            height: 85px;
+            border:1px solid #e1e1e1;
+            text-align: middle;
+        }
+        #user-displayName {
+            position: absolute;
+            font-family: Verdana, Arial, Helvetica, sans-serif; 
+            font-size:1.3em; 
+            color:deepskyblue;
+            margin: 32 0 0 95;
+        }
+        #box-info{
+            /*position: relative;*/
+            padding: 50 0 0 95;
+            width: 800px;
+            height: 500px;
+        }
+        tr.info-row > td{
+            padding-bottom: 1em;
+            width: 200px;
+            color: #666;
+        }
+
+        </style>
+            <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css"/>
+
+            </head>
+            <body>
+                <div id="header">
+                    <div class="navbar navbar-inverse">
+                        <div class="navbar-inner">
+                            <div class="container-fluid">
+                                <a class="brand" href="{{=indexPage}}"><small><i class="icon-leaf"></i> VNG Chat </small> </a>
+                                <ul class="nav  pull-right">
+
+
+                                   <li class="grey">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        <i class="icon-tasks"></i>
+                                        <span class="badge">Add</span>
+                                    </a>      
+                                </li>
+
+
+                                <li class="purple">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        <i class="icon-bell-alt icon-animated-bell icon-only"></i>
+                                        <span class="badge badge-important">8</span>
+                                    </a>       
+                                </li>
+
+
+                                <li class="green">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        <i class="icon-envelope-alt icon-animated-vertical icon-only"></i>
+                                        <span class="badge badge-success">5</span>
+                                    </a>
+                                </li>
+
+                                
+                                <li class="light-blue user-profile">
+                                    <a class="user-menu dropdown-toggle" href="#" data-toggle="dropdown">
+                                        <img alt="User Avatar" src="{{=userAvatar}}" width="60" height="60" id="headerAvartar"/>
+                                        <span id="user_info">
+                                            <small>Welcome <div id = "displayNameViews"> {{=displayName}}</div></small>
+                                            <input type="hidden" name="userId" value="{{=userId}}" id = "userId">
+                                        </span>
+                                        <i class="icon-caret-down"></i>
+                                    </a>
+                                    <ul id="user_menu" class="pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-closer">
+                                        <li><a href="#"><i class="icon-cog"></i> Settings</a></li>
+                                        <li><a href="http://localhost:{{=BUSINESS_PORT}}/profile?userId={{=userId}}&oauthCode={{=oauthCode}}"><i class="icon-user"></i> Profile</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#"><i class="icon-off"></i> Logout</a></li>
+                                    </ul>
+                                </li>
+
+                            </ul><!--/.ace-nav-->
+
+                        </div><!--/.container-fluid-->
+                    </div><!--/.navbar-inner-->
+                </div><!--/.navbar-->
+            </div>
+            <div class = "space-24">
+            </div>
+            <div id="wrapper">
+                <div id="chat-box">
+                    <div class="widget-header">
+                        <h4 class="lighter smaller" id = "name-user-receive">Profile</h4>
+                    </div>
+                    <div class="widget-body" >
+                        <div class="widget-main no-padding">
+                            <div class="dialogs" id="chatWindow"> 
+                                <div id="profile-header">
+                                    <div id="avatar-wrap">
+                                        <!-- Avatar of user -->
+                                        <img id="avatar" alt="Avatar" src="">
+
+                                    </div>
+                                    <div id="user-displayName">
+                                        <p>{{=displayName}}</p>
+                                    </div>
+                                </div>
+                                <div id="box-info">
+                                    <table>
+                                        <tbody>
+                                            <tr class="info-row">
+                                                <td class="info-td">Họ Tên:</td>
+                                                <td class="info-td" id="name"></td>
+                                            </tr>
+                                            <tr class="info-row">
+                                                <td class="info-td">User Name:</td>
+                                                <td class="info-td" id="uname"></td>
+                                            </tr>
+                                            <tr class="info-row">
+                                                <td class="info-td">Ngày Sinh:</td>
+                                                <td class="info-td" id="birth"></td>
+                                            </tr>
+                                            <tr class="info-row">
+                                                <td class="info-td">Giới Tính:</td>
+                                                <td class="info-td" id="sex"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--/widget-main-->
+                </div>
+                <div id="chat-editor" class="hidden">
+                    <div class="photo-input"></div>
+                    <div class="separate-input"></div>
+                    <div class="sticker-input"></div>
+                    <div class="text-input">
+                        <div class="left-text-input"></div>
+                        <input type="text" class="middle-text-input"/>
+                        <div class="right-text-input"></div>
+                    </div>
+                    <div class="send-btn btn-quinary btn">Send</div>
+                </div><!--end: chat editor -->
+            </div><!-- end right-content -->
+
+
+        </body>
+      <!-- js jquery -->
+    <script language="javascript" type="text/javascript" src="{{hostResource}}/js/jquery-1.9.1.min.js"></script>
+    <!-- js jquery slimscroll-->
+    <script language="javascript" type="text/javascript" src="{{hostResource}}/js/jquery.slimscroll.min.js"></script>
+    <!-- js data structure -->
+    <script language="javascript" type="text/javascript" src="{{hostResource}}/js/zalo.data.js"></script>
+    <!-- js global -->
+    <script language="javascript" type="text/javascript" src="{{hostResource}}/js/zalo.global.js"></script>
+    <!-- js external -->
+    <!-- js app -->
+    <!-- js xdomain -->
+    <script language="javascript" type="text/javascript" src="{{hostResource}}/js/jquery.xdomainrequest.min.js"></script>
+    <script language="javascript" type="text/javascript" src="{{hostResource}}/js/jquery-ui-1.10.2.custom.min.js"></script>
+    <script language="javascript" type="text/javascript" src="{{hostResource}}/js/bootstrap.min.js"></script>
+
+    <script>
+        // Used in profile.xtm
+        (function displayProfile(userId) {
+            $.ajax({
+                        type: "POST",
+                        async: true,
+                        data: {userId:'{{=userId}}', oauthCode: '{{=oauthCode}}'},
+                        url: "http://fresherchat.zapps.vn:"+{{=BUSINESS_PORT}}+"/profile",
+                        success: (function(response) {
+                            if (response !== 'undefined') {
+                                // set display name
+                                $('#name').text(response.displayName);
+                                $('#displayNameViews').text(response.displayName);
+                                //change image avatar of user
+                                $("#avatar").attr('src', response.avatar);
+                                $("#headerAvartar").attr('src', response.avatar);
+
+                                // set user name
+                                $('#uname').text(response.userName);
+                                // set birthday
+                                var date = new Date(response.birthDate*1000);
+                                var birthday = date.getDay() + " tháng " + date.getMonth() + " năm " + date.getFullYear();
+                                $('#birth').text(birthday);
+                                // set gender
+                                // Gender Khác Nam Nữ Không xác định
+                                var gender = "";
+                                switch (response.userGender.toString()) {
+                                    case "UGEN_Undef":
+                                        gender = "Không xác định";
+                                        break;
+                                    case "UGEN_Male":
+                                        gender = "Nam";
+                                        break;
+                                    case "UGEN_Female":
+                                        gender = "Nữ";
+                                        break;
+                                    case "UGEN_Other":
+                                        gender = "Khác";
+                                        break;
+                                }
+                                $('#sex').text(gender);
+                            } else {
+                                alert("Error1!!! set profile");
+                            }
+                        }),
+                        error: (function(error) {
+                            alert("Error!!! set profile");
+                    })
+                });
+        })();
+
+    </script>
+</html>
+

@@ -1,0 +1,80 @@
+     <div id="main-content" class="clearfix">
+            <div id="breadcrumbs">
+                <ul class="breadcrumb">
+                     <li><i class="icon-home"></i> <a href="{{host}}/index">Home</a><span class="divider"><i class="icon-angle-right"></i></span></li>
+                    <li><a href="{{host}}/groupEmotion">Emotion Group</a> <span class="divider"><i class="icon-angle-right"></i></span></li>
+                     <li class="active">Emotion </li>
+                </ul><!--.breadcrumb-->
+
+            </div><!--#breadcrumbs-->
+
+            <div id="page-content" class="clearfix">
+
+            <div style="text-align:center; margin:15px;">
+                                    <font style="font-family: serif; font-size:20px;"><B>Add Emotions</B></font></div>
+
+
+                <div style="text-align:center; padding-left:70px; padding-right:70px;">
+                {{errorExist}}
+                <div style="margin-top: 15px;">
+                     <form method="post" >
+                            <input type="hidden" name="totalRow" value = "10" id = "totalRow">
+                            <table id="table_bug_report" class="table table-striped table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Numerical order</th>
+                                        <th>Image URL</th>
+                                        <th>Title</th>
+                                        <th>Emotion Key</th>
+
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                     <tr>
+                                         <td colspan="5">
+                                         
+                                                <center>
+                                    <input type="submit" value="Add Emotion" class="btn btn-success" />
+                                    <input type = "button" class="btn btn-primary" onclick="addNewRow()" value = "Add New Row" />
+                                               </center>
+                                         
+                                         </td>
+                                      </tr>
+                                 </tfoot>     
+                                <tbody>
+                                    {{#listEmotion}}
+                                    {{#emotionItem}}
+                                    <tr>
+                                        <td>{{=imageIndex}}</td>
+                                        <td><input type="text" style="width:100%;" name = "style{{=imageIndex}}"/></td>
+                                        <td>
+                                            <input type="text" style="width:100%;" name = "title{{=imageIndex}}"/>
+                                        </td>
+                                        <td><input type="text" style="width:100%;" name = "emotionKey{{=imageIndex}}"/></td>
+
+
+                                    </tr>
+                                    {{/emotionItem}}
+                                    {{/listEmotion}}
+                                </tbody>
+                            </table>
+                             </form>    
+                           </div>
+                        </div><!--/span-->
+  </div><!--/#page-content-->
+     </div>
+<script>
+    var imageIndex = {{=imageIndex}};
+    function addNewRow(){
+        imageIndex++;
+        var rowItem  = '<tr> <td>'+imageIndex+'</td>'
+                        +'<td><input type="text" style="width:100%;" name = "style'  
+                        + imageIndex + '"/></td>'+' <td> <input type="text" style="width:100%;" name = "title'
+                        + imageIndex+ '"/></td>'+' <td> <input type="text" style="width:100%;" name = "emotionKey'
+                        + imageIndex+ '"/></td></tr>'
+
+           $("#table_bug_report tbody").append(rowItem);
+           $("#totalRow").val(imageIndex);
+    }
+    
+</script>

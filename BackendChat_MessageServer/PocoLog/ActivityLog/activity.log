@@ -1,0 +1,116 @@
+----------------------------stop BackEndServer--------------------------------
+start BackEndServer
+load data from hashDB to cachDB
+Loading database from Disk to Memory....MessageId
+After load: 0key-value in cachMessageId
+After load: 0key-value in hashMessageId
+Loading database from Disk to Memory....MessageItem
+After load: 0key-value in cachMessageItem
+After load: 0key-value in hashMessageItem
+Loading database from Disk to Memory....MessageOffline
+After load: 0key-value in cachMessageOffline
+After load: 0key-value in hashMessageOffline
+finish loading data from hashDB to cachDB
+----------------------------stop BackEndServer--------------------------------
+start BackEndServer
+load data from hashDB to cachDB
+Loading database from Disk to Memory....MessageId
+After load: 99key-value in cachMessageId
+After load: 99key-value in hashMessageId
+Loading database from Disk to Memory....MessageItem
+After load: 3000key-value in cachMessageItem
+After load: 3000key-value in hashMessageItem
+Loading database from Disk to Memory....MessageOffline
+After load: 1key-value in cachMessageOffline
+After load: 1key-value in hashMessageOffline
+finish loading data from hashDB to cachDB
+----------------------------stop BackEndServer--------------------------------
+start BackEndServer
+load data from hashDB to cachDB
+Loading database from Disk to Memory....MessageId
+After load: 99key-value in cachMessageId
+After load: 99key-value in hashMessageId
+Loading database from Disk to Memory....MessageItem
+After load: 3000key-value in cachMessageItem
+After load: 3000key-value in hashMessageItem
+Loading database from Disk to Memory....MessageOffline
+After load: 1key-value in cachMessageOffline
+After load: 1key-value in hashMessageOffline
+finish loading data from hashDB to cachDB
+----------------------------stop BackEndServer--------------------------------
+start BackEndServer
+load data from hashDB to cachDB
+Loading database from Disk to Memory....MessageId
+After load: 101key-value in cachMessageId
+After load: 101key-value in hashMessageId
+Loading database from Disk to Memory....MessageItem
+After load: 3002key-value in cachMessageItem
+After load: 3002key-value in hashMessageItem
+Loading database from Disk to Memory....MessageOffline
+After load: 2key-value in cachMessageOffline
+After load: 2key-value in hashMessageOffline
+finish loading data from hashDB to cachDB
+----------------------------stop BackEndServer--------------------------------
+start BackEndServer
+load data from hashDB to cachDB
+Loading database from Disk to Memory....MessageId
+After load: 101key-value in cachMessageId
+After load: 101key-value in hashMessageId
+Loading database from Disk to Memory....MessageItem
+After load: 3002key-value in cachMessageItem
+After load: 3002key-value in hashMessageItem
+Loading database from Disk to Memory....MessageOffline
+After load: 2key-value in cachMessageOffline
+After load: 2key-value in hashMessageOffline
+finish loading data from hashDB to cachDB
+----------------------------stop BackEndServer--------------------------------
+start BackEndServer
+load data from hashDB to cachDB
+Loading database from Disk to Memory....MessageId
+After load: 101key-value in cachMessageId
+After load: 101key-value in hashMessageId
+Loading database from Disk to Memory....MessageItem
+After load: 3002key-value in cachMessageItem
+After load: 3002key-value in hashMessageItem
+Loading database from Disk to Memory....MessageOffline
+After load: 2key-value in cachMessageOffline
+After load: 2key-value in hashMessageOffline
+finish loading data from hashDB to cachDB
+start BackEndServer
+load data from hashDB to cachDB
+Loading database from Disk to Memory....MessageId
+After load: 101key-value in cachMessageId
+After load: 101key-value in hashMessageId
+Loading database from Disk to Memory....MessageItem
+After load: 3002key-value in cachMessageItem
+After load: 3002key-value in hashMessageItem
+Loading database from Disk to Memory....MessageOffline
+After load: 2key-value in cachMessageOffline
+After load: 2key-value in hashMessageOffline
+finish loading data from hashDB to cachDB
+start BackEndServer
+load data from hashDB to cachDB
+Loading database from Disk to Memory....MessageId
+After load: 0key-value in cachMessageId
+After load: 0key-value in hashMessageId
+Loading database from Disk to Memory....MessageItem
+After load: 0key-value in cachMessageItem
+After load: 0key-value in hashMessageItem
+Loading database from Disk to Memory....MessageOffline
+After load: 0key-value in cachMessageOffline
+After load: 0key-value in hashMessageOffline
+finish loading data from hashDB to cachDB
+----------------------------stop BackEndServer--------------------------------
+start BackEndServer
+load data from hashDB to cachDB
+Loading database from Disk to Memory....MessageId
+After load: 1key-value in cachMessageId
+After load: 1key-value in hashMessageId
+Loading database from Disk to Memory....MessageItem
+After load: 22key-value in cachMessageItem
+After load: 22key-value in hashMessageItem
+Loading database from Disk to Memory....MessageOffline
+After load: 0key-value in cachMessageOffline
+After load: 0key-value in hashMessageOffline
+finish loading data from hashDB to cachDB
+----------------------------stop BackEndServer--------------------------------

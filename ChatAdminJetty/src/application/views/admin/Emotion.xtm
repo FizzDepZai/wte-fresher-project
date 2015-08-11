@@ -1,0 +1,79 @@
+    
+     <div id="main-content" class="clearfix">
+            <div id="breadcrumbs">
+                <ul class="breadcrumb">
+                 <li><i class="icon-home"></i> <a href="{{host}}/index">Home</a><span class="divider"><i class="icon-angle-right"></i></span></li>
+                    <li class="active">Group Emotion </li>
+                </ul><!--.breadcrumb-->
+
+            </div><!--#breadcrumbs-->
+
+            <div id="page-content" class="clearfix">
+                <div class="page-header position-relative">
+                  <button class="btn btn-primary"  id = "bootbox-regular">Add Group Emotions</button>
+                </div><!--/page-header-->
+
+        
+
+                    <!-- PAGE CONTENT BEGINS HERE -->
+                     {{#listEmotion}}
+                     {{#emotionItem}}
+
+                    <div class="span4">
+                        <!-- onclick to show details -->
+                        <div class="widget-box pricing-box-small" id = "{{=groupId}}" >
+                            <div class="widget-header header-color-dark">
+                                <span class="bigger lighter" style="float:left; margin-top:8px;">
+                                    <font style="font-family: serif; font-size:20px;"><B>{{=groupEmotionName}}</B></font></span>
+                                <button class='btn btn-mini btn-info edit' data-rel="tooltip" title="Edit" onclick="editGroupName({{=groupId}});" ><i class='icon-edit'></i></button>
+                                <button class='btn btn-mini btn-danger delete' data-rel="tooltip" title="Delete" onclick="deleteGroup({{=groupId}});" ><i class='icon-trash'></i></button>
+                                <button class='btn btn-mini btn-info edit' data-rel="tooltip" title="Report" onclick="reportSpecificRoom({{groupId}});" ><i class='icon-signal'></i></button>
+                            </div>
+                            <div class="widget-body">
+                                <div class="widget-main" onclick="location.href = '{{host}}/groupEmotion/emotion?groupId={{=groupId}}'">
+                                    <table border="0"  cellpadding="5" id = "emotionGroupList">
+                                    
+                                        <tr>
+                                            <th rowspan="2"> 
+                                            {{#emotionImageItem}}
+                                            <img src="{{=imageLink0}}" > </img>
+                                            {{/emotionImageItem}}
+                                            </th>
+                                             <!-- turn on when have image -->
+                                            {{#imageItemRow1}}
+                                            <td><img src="{{=imageLink}}" ></td>
+                                            {{/imageItemRow1}}
+                                                            
+                                        </tr>
+                                         <tr>
+                                             {{#imageItemRow2}}
+                                            <td><img src="{{=imageLink}}"></td>
+                                            {{/imageItemRow2}}
+
+                                        </tr>
+                                      
+
+
+                                    </table>
+                                    
+
+                                </div>
+                            </div><!--/.dark box-->
+
+                        </div>
+                            {{newRowsView}}                                  
+                    </div>
+                    {{/emotionItem}}
+                    {{/listEmotion}}
+                    
+
+            </div><!--/#page-content-->
+     </div>
+<script>
+    function goToReportAllEmotionSet(){
+        window.location="{{host}}/reportAllEmotionSets";
+    }
+    function reportSpecificRoom(id){
+        window.location="{{host}}/reportSpecificEmotionSet?SetId=" + id;
+    }
+</script>

@@ -1,0 +1,445 @@
+start BackEndServer
+load data from hashDB to cachDB
+Loading database from Disk to Memory....GroupEmotionItem
+After load: 2key-value in cachGroupEmotionItem
+After load: 2key-value in hashGroupEmotionItem
+Loading database from Disk to Memory....EmotionItem
+After load: 77key-value in cachEmotionItem
+After load: 77key-value in hashEmotionItem
+Loading database from Disk to Memory....RoomStatistic
+After load: 0key-value in cachRoomStatistic
+After load: 0key-value in hashRoomStatistic
+Loading database from Disk to Memory....EmotionStatistic
+After load: 0key-value in cachEmotionStatistic
+After load: 0key-value in hashEmotionStatistic
+Loading database from Disk to Memory....ChatRoom
+After load: 0key-value in cachChatRoom
+After load: 0key-value in hashChatRoom
+Loading database from Disk to Memory....GroupEmotion
+After load: 1key-value in cachGroupEmotion
+After load: 1key-value in hashGroupEmotion
+Loading database from Disk to Memory....AdminList
+After load: 2key-value in cachAdminList
+After load: 2key-value in hashAdminList
+finish loading data from hashDB to cachDB
+WRITE TO HASHDB
+WRITE TO HASHDB
+WRITE TO HASHDB
+WRITE TO HASHDB
+WRITE TO HASHDB
+WRITE TO HASHDB
+start BackEndServer
+load data from hashDB to cachDB
+Loading database from Disk to Memory....GroupEmotionItem
+After load: 1key-value in cachGroupEmotionItem
+After load: 1key-value in hashGroupEmotionItem
+Loading database from Disk to Memory....EmotionItem
+After load: 0key-value in cachEmotionItem
+After load: 0key-value in hashEmotionItem
+Loading database from Disk to Memory....RoomStatistic
+After load: 0key-value in cachRoomStatistic
+After load: 0key-value in hashRoomStatistic
+Loading database from Disk to Memory....EmotionStatistic
+After load: 0key-value in cachEmotionStatistic
+After load: 0key-value in hashEmotionStatistic
+Loading database from Disk to Memory....ChatRoom
+After load: 0key-value in cachChatRoom
+After load: 0key-value in hashChatRoom
+Loading database from Disk to Memory....GroupEmotion
+After load: 0key-value in cachGroupEmotion
+After load: 0key-value in hashGroupEmotion
+Loading database from Disk to Memory....AdminList
+After load: 2key-value in cachAdminList
+After load: 2key-value in hashAdminList
+finish loading data from hashDB to cachDB
+start BackEndServer
+load data from hashDB to cachDB
+Loading database from Disk to Memory....GroupEmotionItem
+After load: 0key-value in cachGroupEmotionItem
+After load: 0key-value in hashGroupEmotionItem
+Loading database from Disk to Memory....EmotionItem
+After load: 0key-value in cachEmotionItem
+After load: 0key-value in hashEmotionItem
+Loading database from Disk to Memory....RoomStatistic
+After load: 0key-value in cachRoomStatistic
+After load: 0key-value in hashRoomStatistic
+Loading database from Disk to Memory....EmotionStatistic
+After load: 0key-value in cachEmotionStatistic
+After load: 0key-value in hashEmotionStatistic
+Loading database from Disk to Memory....ChatRoom
+After load: 0key-value in cachChatRoom
+After load: 0key-value in hashChatRoom
+Loading database from Disk to Memory....GroupEmotion
+After load: 0key-value in cachGroupEmotion
+After load: 0key-value in hashGroupEmotion
+Loading database from Disk to Memory....AdminList
+After load: 0key-value in cachAdminList
+After load: 0key-value in hashAdminList
+finish loading data from hashDB to cachDB
+----------------------------stop BackEndServer--------------------------------
+start BackEndServer
+load data from hashDB to cachDB
+Loading database from Disk to Memory....GroupEmotionItem
+After load: 3key-value in cachGroupEmotionItem
+After load: 3key-value in hashGroupEmotionItem
+Loading database from Disk to Memory....EmotionItem
+After load: 79key-value in cachEmotionItem
+After load: 79key-value in hashEmotionItem
+Loading database from Disk to Memory....RoomStatistic
+After load: 0key-value in cachRoomStatistic
+After load: 0key-value in hashRoomStatistic
+Loading database from Disk to Memory....EmotionStatistic
+After load: 0key-value in cachEmotionStatistic
+After load: 0key-value in hashEmotionStatistic
+Loading database from Disk to Memory....ChatRoom
+After load: 0key-value in cachChatRoom
+After load: 0key-value in hashChatRoom
+Loading database from Disk to Memory....GroupEmotion
+After load: 2key-value in cachGroupEmotion
+After load: 2key-value in hashGroupEmotion
+Loading database from Disk to Memory....AdminList
+After load: 2key-value in cachAdminList
+After load: 2key-value in hashAdminList
+finish loading data from hashDB to cachDB
+----------------------------stop BackEndServer--------------------------------
+start BackEndServer
+load data from hashDB to cachDB
+Loading database from Disk to Memory....GroupEmotionItem
+After load: 3key-value in cachGroupEmotionItem
+After load: 3key-value in hashGroupEmotionItem
+Loading database from Disk to Memory....EmotionItem
+After load: 0key-value in cachEmotionItem
+After load: 0key-value in hashEmotionItem
+Loading database from Disk to Memory....RoomStatistic
+After load: 0key-value in cachRoomStatistic
+After load: 0key-value in hashRoomStatistic
+Loading database from Disk to Memory....EmotionStatistic
+After load: 0key-value in cachEmotionStatistic
+After load: 0key-value in hashEmotionStatistic
+Loading database from Disk to Memory....ChatRoom
+After load: 0key-value in cachChatRoom
+After load: 0key-value in hashChatRoom
+Loading database from Disk to Memory....GroupEmotion
+After load: 0key-value in cachGroupEmotion
+After load: 0key-value in hashGroupEmotion
+Loading database from Disk to Memory....AdminList
+After load: 0key-value in cachAdminList
+After load: 0key-value in hashAdminList
+finish loading data from hashDB to cachDB
+----------------------------stop BackEndServer--------------------------------
+start BackEndServer
+load data from hashDB to cachDB
+Loading database from Disk to Memory....GroupEmotionItem
+After load: 3key-value in cachGroupEmotionItem
+After load: 3key-value in hashGroupEmotionItem
+Loading database from Disk to Memory....EmotionItem
+After load: 79key-value in cachEmotionItem
+After load: 79key-value in hashEmotionItem
+Loading database from Disk to Memory....RoomStatistic
+After load: 0key-value in cachRoomStatistic
+After load: 0key-value in hashRoomStatistic
+Loading database from Disk to Memory....EmotionStatistic
+After load: 0key-value in cachEmotionStatistic
+After load: 0key-value in hashEmotionStatistic
+Loading database from Disk to Memory....ChatRoom
+After load: 0key-value in cachChatRoom
+After load: 0key-value in hashChatRoom
+Loading database from Disk to Memory....GroupEmotion
+After load: 2key-value in cachGroupEmotion
+After load: 2key-value in hashGroupEmotion
+Loading database from Disk to Memory....AdminList
+After load: 0key-value in cachAdminList
+After load: 0key-value in hashAdminList
+finish loading data from hashDB to cachDB
+----------------------------stop BackEndServer--------------------------------
+start BackEndServer
+load data from hashDB to cachDB
+Loading database from Disk to Memory....GroupEmotionItem
+After load: 3key-value in cachGroupEmotionItem
+After load: 3key-value in hashGroupEmotionItem
+Loading database from Disk to Memory....EmotionItem
+After load: 79key-value in cachEmotionItem
+After load: 79key-value in hashEmotionItem
+Loading database from Disk to Memory....RoomStatistic
+After load: 0key-value in cachRoomStatistic
+After load: 0key-value in hashRoomStatistic
+Loading database from Disk to Memory....EmotionStatistic
+After load: 0key-value in cachEmotionStatistic
+After load: 0key-value in hashEmotionStatistic
+Loading database from Disk to Memory....ChatRoom
+After load: 0key-value in cachChatRoom
+After load: 0key-value in hashChatRoom
+Loading database from Disk to Memory....GroupEmotion
+After load: 2key-value in cachGroupEmotion
+After load: 2key-value in hashGroupEmotion
+Loading database from Disk to Memory....AdminList
+After load: 0key-value in cachAdminList
+After load: 0key-value in hashAdminList
+finish loading data from hashDB to cachDB
+----------------------------stop BackEndServer--------------------------------
+start BackEndServer
+load data from hashDB to cachDB
+Loading database from Disk to Memory....GroupEmotionItem
+After load: 3key-value in cachGroupEmotionItem
+After load: 3key-value in hashGroupEmotionItem
+Loading database from Disk to Memory....EmotionItem
+After load: 79key-value in cachEmotionItem
+After load: 79key-value in hashEmotionItem
+Loading database from Disk to Memory....RoomStatistic
+After load: 0key-value in cachRoomStatistic
+After load: 0key-value in hashRoomStatistic
+Loading database from Disk to Memory....EmotionStatistic
+After load: 0key-value in cachEmotionStatistic
+After load: 0key-value in hashEmotionStatistic
+Loading database from Disk to Memory....ChatRoom
+After load: 0key-value in cachChatRoom
+After load: 0key-value in hashChatRoom
+Loading database from Disk to Memory....GroupEmotion
+After load: 2key-value in cachGroupEmotion
+After load: 2key-value in hashGroupEmotion
+Loading database from Disk to Memory....AdminList
+After load: 0key-value in cachAdminList
+After load: 0key-value in hashAdminList
+finish loading data from hashDB to cachDB
+start BackEndServer
+load data from hashDB to cachDB
+Loading database from Disk to Memory....GroupEmotionItem
+After load: 3key-value in cachGroupEmotionItem
+After load: 3key-value in hashGroupEmotionItem
+Loading database from Disk to Memory....EmotionItem
+After load: 79key-value in cachEmotionItem
+After load: 79key-value in hashEmotionItem
+Loading database from Disk to Memory....RoomStatistic
+After load: 0key-value in cachRoomStatistic
+After load: 0key-value in hashRoomStatistic
+Loading database from Disk to Memory....EmotionStatistic
+After load: 0key-value in cachEmotionStatistic
+After load: 0key-value in hashEmotionStatistic
+Loading database from Disk to Memory....ChatRoom
+After load: 0key-value in cachChatRoom
+After load: 0key-value in hashChatRoom
+Loading database from Disk to Memory....GroupEmotion
+After load: 2key-value in cachGroupEmotion
+After load: 2key-value in hashGroupEmotion
+Loading database from Disk to Memory....AdminList
+After load: 0key-value in cachAdminList
+After load: 0key-value in hashAdminList
+finish loading data from hashDB to cachDB
+----------------------------stop BackEndServer--------------------------------
+start BackEndServer
+load data from hashDB to cachDB
+Loading database from Disk to Memory....GroupEmotionItem
+After load: 3key-value in cachGroupEmotionItem
+After load: 3key-value in hashGroupEmotionItem
+Loading database from Disk to Memory....EmotionItem
+After load: 79key-value in cachEmotionItem
+After load: 79key-value in hashEmotionItem
+Loading database from Disk to Memory....RoomStatistic
+After load: 0key-value in cachRoomStatistic
+After load: 0key-value in hashRoomStatistic
+Loading database from Disk to Memory....EmotionStatistic
+After load: 0key-value in cachEmotionStatistic
+After load: 0key-value in hashEmotionStatistic
+Loading database from Disk to Memory....ChatRoom
+After load: 0key-value in cachChatRoom
+After load: 0key-value in hashChatRoom
+Loading database from Disk to Memory....GroupEmotion
+After load: 2key-value in cachGroupEmotion
+After load: 2key-value in hashGroupEmotion
+Loading database from Disk to Memory....AdminList
+After load: 0key-value in cachAdminList
+After load: 0key-value in hashAdminList
+finish loading data from hashDB to cachDB
+ADD_ITEM to database: GroupEmotion
+ADD_ITEM to database: GroupEmotion
+ADD_ITEM to database: GroupEmotion
+ADD_ITEM to database: EmotionItem
+ADD_ITEM to database: GroupEmotion
+ADD_ITEM to database: EmotionItem
+ADD_ITEM to database: EmotionItem
+ADD_ITEM to database: EmotionItem
+ADD_ITEM to database: GroupEmotion
+ADD_ITEM to database: EmotionItem
+ADD_ITEM to database: EmotionItem
+ADD_ITEM to database: GroupEmotion
+ADD_ITEM to database: EmotionItem
+ADD_ITEM to database: GroupEmotion
+ADD_ITEM to database: GroupEmotion
+ADD_ITEM to database: EmotionItem
+ADD_ITEM to database: GroupEmotion
+ADD_ITEM to database: EmotionItem
+ADD_ITEM to database: GroupEmotion
+ADD_ITEM to database: EmotionItem
+ADD_ITEM to database: GroupEmotion
+ADD_ITEM to database: EmotionItem
+ADD_ITEM to database: GroupEmotionItem
+ADD_ITEM to database: GroupEmotion
+ADD_ITEM to database: EmotionItem
+ADD_ITEM to database: GroupEmotion
+ADD_ITEM to database: EmotionItem
+ADD_ITEM to database: GroupEmotion
+ADD_ITEM to database: EmotionItem
+ADD_ITEM to database: GroupEmotionItem
+ADD_ITEM to database: GroupEmotion
+ADD_ITEM to database: EmotionItem
+ADD_ITEM to database: GroupEmotion
+ADD_ITEM to database: EmotionItem
+ADD_ITEM to database: GroupEmotion
+ADD_ITEM to database: EmotionItem
+----------------------------stop BackEndServer--------------------------------
+start BackEndServer
+load data from hashDB to cachDB
+Loading database from Disk to Memory....GroupEmotionItem
+After load: 3key-value in cachGroupEmotionItem
+After load: 3key-value in hashGroupEmotionItem
+Loading database from Disk to Memory....EmotionItem
+After load: 78key-value in cachEmotionItem
+After load: 78key-value in hashEmotionItem
+Loading database from Disk to Memory....RoomStatistic
+After load: 0key-value in cachRoomStatistic
+After load: 0key-value in hashRoomStatistic
+Loading database from Disk to Memory....EmotionStatistic
+After load: 0key-value in cachEmotionStatistic
+After load: 0key-value in hashEmotionStatistic
+Loading database from Disk to Memory....ChatRoom
+After load: 0key-value in cachChatRoom
+After load: 0key-value in hashChatRoom
+Loading database from Disk to Memory....GroupEmotion
+After load: 2key-value in cachGroupEmotion
+After load: 2key-value in hashGroupEmotion
+Loading database from Disk to Memory....AdminList
+After load: 0key-value in cachAdminList
+After load: 0key-value in hashAdminList
+finish loading data from hashDB to cachDB
+ADD_ITEM to database: GroupEmotionItem
+ADD_ITEM to database: GroupEmotion
+ADD_ITEM to database: EmotionItem
+ADD_ITEM to database: EmotionItem
+ADD_ITEM to database: GroupEmotion
+ADD_ITEM to database: GroupEmotion
+ADD_ITEM to database: EmotionItem
+----------------------------stop BackEndServer--------------------------------
+start BackEndServer
+load data from hashDB to cachDB
+Loading database from Disk to Memory....GroupEmotionItem
+After load: 3key-value in cachGroupEmotionItem
+After load: 3key-value in hashGroupEmotionItem
+Loading database from Disk to Memory....EmotionItem
+After load: 78key-value in cachEmotionItem
+After load: 78key-value in hashEmotionItem
+Loading database from Disk to Memory....RoomStatistic
+After load: 0key-value in cachRoomStatistic
+After load: 0key-value in hashRoomStatistic
+Loading database from Disk to Memory....EmotionStatistic
+After load: 0key-value in cachEmotionStatistic
+After load: 0key-value in hashEmotionStatistic
+Loading database from Disk to Memory....ChatRoom
+After load: 0key-value in cachChatRoom
+After load: 0key-value in hashChatRoom
+Loading database from Disk to Memory....GroupEmotion
+After load: 2key-value in cachGroupEmotion
+After load: 2key-value in hashGroupEmotion
+Loading database from Disk to Memory....AdminList
+After load: 0key-value in cachAdminList
+After load: 0key-value in hashAdminList
+finish loading data from hashDB to cachDB
+ADD_ITEM to database: EmotionItem
+start BackEndServer
+load data from hashDB to cachDB
+Loading database from Disk to Memory....GroupEmotionItem
+After load: 3key-value in cachGroupEmotionItem
+After load: 3key-value in hashGroupEmotionItem
+Loading database from Disk to Memory....EmotionItem
+After load: 78key-value in cachEmotionItem
+After load: 78key-value in hashEmotionItem
+Loading database from Disk to Memory....RoomStatistic
+After load: 0key-value in cachRoomStatistic
+After load: 0key-value in hashRoomStatistic
+Loading database from Disk to Memory....EmotionStatistic
+After load: 0key-value in cachEmotionStatistic
+After load: 0key-value in hashEmotionStatistic
+Loading database from Disk to Memory....ChatRoom
+After load: 0key-value in cachChatRoom
+After load: 0key-value in hashChatRoom
+Loading database from Disk to Memory....GroupEmotion
+After load: 2key-value in cachGroupEmotion
+After load: 2key-value in hashGroupEmotion
+Loading database from Disk to Memory....AdminList
+After load: 0key-value in cachAdminList
+After load: 0key-value in hashAdminList
+finish loading data from hashDB to cachDB
+----------------------------stop BackEndServer--------------------------------
+start BackEndServer
+load data from hashDB to cachDB
+Loading database from Disk to Memory....GroupEmotionItem
+After load: 3key-value in cachGroupEmotionItem
+After load: 3key-value in hashGroupEmotionItem
+Loading database from Disk to Memory....EmotionItem
+After load: 79key-value in cachEmotionItem
+After load: 79key-value in hashEmotionItem
+Loading database from Disk to Memory....RoomStatistic
+After load: 0key-value in cachRoomStatistic
+After load: 0key-value in hashRoomStatistic
+Loading database from Disk to Memory....EmotionStatistic
+After load: 0key-value in cachEmotionStatistic
+After load: 0key-value in hashEmotionStatistic
+Loading database from Disk to Memory....ChatRoom
+After load: 0key-value in cachChatRoom
+After load: 0key-value in hashChatRoom
+Loading database from Disk to Memory....GroupEmotion
+After load: 2key-value in cachGroupEmotion
+After load: 2key-value in hashGroupEmotion
+Loading database from Disk to Memory....AdminList
+After load: 0key-value in cachAdminList
+After load: 0key-value in hashAdminList
+finish loading data from hashDB to cachDB
+start BackEndServer
+load data from hashDB to cachDB
+Loading database from Disk to Memory....GroupEmotionItem
+After load: 3key-value in cachGroupEmotionItem
+After load: 3key-value in hashGroupEmotionItem
+Loading database from Disk to Memory....EmotionItem
+After load: 79key-value in cachEmotionItem
+After load: 79key-value in hashEmotionItem
+Loading database from Disk to Memory....RoomStatistic
+After load: 0key-value in cachRoomStatistic
+After load: 0key-value in hashRoomStatistic
+Loading database from Disk to Memory....EmotionStatistic
+After load: 0key-value in cachEmotionStatistic
+After load: 0key-value in hashEmotionStatistic
+Loading database from Disk to Memory....ChatRoom
+After load: 0key-value in cachChatRoom
+After load: 0key-value in hashChatRoom
+Loading database from Disk to Memory....GroupEmotion
+After load: 2key-value in cachGroupEmotion
+After load: 2key-value in hashGroupEmotion
+Loading database from Disk to Memory....AdminList
+After load: 0key-value in cachAdminList
+After load: 0key-value in hashAdminList
+finish loading data from hashDB to cachDB
+----------------------------stop BackEndServer--------------------------------
+start BackEndServer
+load data from hashDB to cachDB
+Loading database from Disk to Memory....GroupEmotionItem
+After load: 3key-value in cachGroupEmotionItem
+After load: 3key-value in hashGroupEmotionItem
+Loading database from Disk to Memory....EmotionItem
+After load: 79key-value in cachEmotionItem
+After load: 79key-value in hashEmotionItem
+Loading database from Disk to Memory....RoomStatistic
+After load: 0key-value in cachRoomStatistic
+After load: 0key-value in hashRoomStatistic
+Loading database from Disk to Memory....EmotionStatistic
+After load: 0key-value in cachEmotionStatistic
+After load: 0key-value in hashEmotionStatistic
+Loading database from Disk to Memory....ChatRoom
+After load: 0key-value in cachChatRoom
+After load: 0key-value in hashChatRoom
+Loading database from Disk to Memory....GroupEmotion
+After load: 2key-value in cachGroupEmotion
+After load: 2key-value in hashGroupEmotion
+Loading database from Disk to Memory....AdminList
+After load: 0key-value in cachAdminList
+After load: 0key-value in hashAdminList
+finish loading data from hashDB to cachDB
+----------------------------stop BackEndServer--------------------------------

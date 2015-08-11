@@ -1,0 +1,20 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Continuation Chat Server demo</title>
+
+    </head>
+
+    <body>
+        <form method = "get" action="index">
+        <p>
+            <label for="userName">Your Key Name: </label><input type="text" id="userId" name="userId" /> 
+        </p>
+
+        <p>
+            <input type="submit" id="addButton"  value="Add"/>
+        </p>
+         </form>
+       
+    </body>
+</html>

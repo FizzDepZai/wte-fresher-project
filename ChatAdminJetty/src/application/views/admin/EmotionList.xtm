@@ -1,0 +1,108 @@
+<div id="main-content" class="clearfix">
+    <div id="breadcrumbs">
+        <ul class="breadcrumb">
+            <li><i class="icon-home"></i> <a href="{{host}}/index">Home</a><span class="divider"><i class="icon-angle-right"></i></span></li>
+            <li><a href="{{host}}/groupEmotion">Emotion Group</a> <span class="divider"><i class="icon-angle-right"></i></span></li>
+            <li class="active">Emotion </li>
+        </ul><!--.breadcrumb-->
+
+  
+    </div><!--#breadcrumbs-->
+
+    <div id="page-content" class="clearfix">
+        <div class="page-header position-relative">
+
+            <!-- <div class="row-fluid">
+                    <div class="span3">
+
+                    <div class="widget-box">
+                        <div class="widget-header">
+                            <h4>Add New Sticker</h4>
+                        </div>
+                        <div class="widget-body">
+                            <div class="widget-main">
+                                <form method="post" action="" enctype="multipart/form-data">
+                                    <input multiple type="file" name="uploadFile" id = "upload-image" />
+                                    <br/><br/>
+                                    <input type="submit" value="Upload" class="btn btn-success" />
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+                <button class="btn btn-primary" onclick="location.href = '{{host}}/groupEmotion/emotion/addEmotion?groupId={{=groupId}}'" >Add New Emotion</button>
+
+            </div>
+
+        </div><!--/page-header-->
+
+
+
+        <div class="row-fluid">
+            <!-- PAGE CONTENT BEGINS HERE -->
+
+            <div class="row-fluid">
+                <div class="header smaller lighter blue"><font style="font-family:serif; font-size:20px;"><B>Emotions In Group</B></font></div>
+                <div class="table-header">
+                    List All Emotions
+                </div>
+
+                <table id="table_report" class="table table-striped table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th class="center">
+                                <label><input type="checkbox" /><span class="lbl"></span></label>
+                            </th>
+                            <th>ID</th>
+                            <th>Image</th>
+                            <th class="hidden-480">Description</th>                             
+                            <th></th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                         {{#listEmotion}}
+                         {{#emotionItem}}
+                        <tr>
+                            <td class='center'>
+                                <label><input type='checkbox' /><span class="lbl"></span></label>
+                            </td>
+                            <td>{{=imageId}}</td>
+                            <td><img src="{{=imageLink}}"></td>
+                            <td class='hidden-480'>{{=description}}</td>                                 
+                            <td>
+                                <div class='hidden-phone visible-desktop btn-group'>
+                                    <button class='btn btn-mini btn-info' data-rel="tooltip" title="Edit"
+                                            onclick="location.href = '{{host}}/groupEmotion/emotion/edit?id={{=emotionIndexInGroup}}&groupId={{=groupId}}'"><i class='icon-edit'></i></button>
+                                    <button class='delete btn btn-mini btn-danger' data-rel="tooltip" title="Delete" id ="{{=emotionId}}" ><i class='icon-trash'></i></button>
+                                </div>                             
+                            </td>
+                        </tr>
+
+                          {{/emotionItem}}
+                           {{/listEmotion}}
+
+                    </tbody>
+                </table>
+
+            </div>
+
+
+
+
+            <!-- PAGE CONTENT ENDS HERE -->
+        </div><!--/row-->
+
+    </div><!--/#page-content-->
+
+
+
+
+</div><!-- #main-content -->
+
+
+
+
+
+
+

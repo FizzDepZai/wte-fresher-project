@@ -1,0 +1,315 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+<head>
+    <title>Zalo</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="imagetoolbar" content="no" />
+    <!-- css all -->
+    <link href="{{hostResource}}/css/zalo.all.css" rel="stylesheet" type="text/css" />
+    <!-- css app -->
+    <link href="{{hostResource}}/css/zalo.app.css" rel="stylesheet" type="text/css" />
+    <!-- css chat -->
+    <link href="{{hostResource}}/css/zalo.chat.css" rel="stylesheet" type="text/css" /> 
+    <link href="{{hostResource}}/css/zalo.profile.css" rel="stylesheet" type="text/css" /> 
+
+    <!-- basic styles -->
+        <!-- <link href="{{hostResource}}/assets/css/bootstrap.min.css" rel="stylesheet" /> -->
+        <link href="{{hostResource}}/assets/css/uncompressed/bootstrap.css" rel="stylesheet" />
+
+        <link href="{{hostResource}}/assets/css/bootstrap-responsive.min.css" rel="stylesheet" />
+
+        <link rel="stylesheet" href="{{hostResource}}/assets/css/font-awesome.min.css" />
+        <!--[if IE 7]>
+          <link rel="stylesheet" href="{{hostResource}}/assets/css/font-awesome-ie7.min.css" />
+        <![endif]-->
+
+
+        <!-- page specific plugin styles -->
+        
+        <link rel="stylesheet" href="{{hostResource}}/assets/css/colorbox.css" />
+
+        <!-- ace styles -->
+        <link rel="stylesheet" href="{{hostResource}}/assets/css/uncompressed/ace.css" />
+        <link rel="stylesheet" href="{{hostResource}}/assets/css/uncompressed/ace-responsive.css" />
+        <link rel="stylesheet" href="{{hostResource}}/assets/css/uncompressed/ace-skins.css" />
+        <link rel="stylesheet" href="{{hostResource}}/assets/css/chatv2.css" />
+      <!-- /*  <style>
+            #search-text{
+                width:  80%;
+            }
+        </style>*/ -->
+</head>
+<body>
+
+
+    <!-- wrapper -->
+    <div id="my-profile-container" style="rgba(0,0,0,0.5);">
+        <div id="my-profile-wrapper">
+            <div id="my-profile-panel">
+               
+                <div id="my-profile-content">
+                    <div id="my-profile-top"><font face="Verdana" color="white" style="line-height:40px; font-size:20px; text-align:center; padding-top:10px;"><B>MY PROFILE</font></B></div>
+                <div id="left-bar" class="left-float">
+                    <ul id="left-menu">
+                        <li class="contacts-btn menu-btn active" id="btn-profile">
+                            <div class="icon">
+                            </div>                     
+                        </li>
+                        <li class="conversation-btn menu-btn">
+                            <div class="icon">
+                            </div>
+                        </li>
+                       
+                    </ul><!-- end left-menu -->
+                </div> <!-- end left-bar -->
+
+                <div id="my-profile-middlebar">
+                            <img id="avatar" alt="Avatar" src="assets/images/gallery/thumb-5.jpg">
+                </div> <!-- end my-profile-middlebar -->
+
+                 <div id="my-profile-rightbar">
+                        <div id ="my-profile-info">
+                            <table>         
+                                <tbody>
+                                    <tr class="info-row">
+                                        <td class="info-td1"><B>Họ Tên:</B></td>
+                                        <td class="info-td2" id="name"></td>
+                                    </tr>
+                                    <tr class="info-row">
+                                        <td class="info-td1"><B>User Name:</B></td>
+                                        <td class="info-td2" id="uname"></td>
+                                    </tr>
+                                    <tr class="info-row">
+                                        <td class="info-td1"><B>Ngày Sinh:</B></td>
+                                        <td class="info-td2" id="birth"></td>
+                                    </tr>
+                                    <tr class="info-row">
+                                        <td class="info-td1"><B>Giới Tính:</B></td>
+                                        <td class="info-td2" id="sex"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div> <!-- end my-profile-rightbar -->
+
+              </div><!-- "end my-profile-panel" -->
+          </div><!-- end wrapper -->
+      </div><!-- end container -->
+
+        <!-- basic scripts -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        
+        
+        <script src="{{hostResource}}/assets/js/bootstrap.min.js"></script>
+
+        <!-- page specific plugin scripts -->
+        
+        <script type="text/javascript" src="{{hostResource}}/assets/js/jquery.colorbox-min.js"></script>
+
+
+        <!-- ace scripts -->
+        <script src="{{hostResource}}/assets/js/ace-elements.min.js"></script>
+        <script src="{{hostResource}}/assets/js/ace.min.js"></script>
+     <!-- // <script src="{{hostResource}}/assets/js/chatv2.js"></script> -->
+
+        <script src="{{hostResource}}/assets/js/selector.js"></script>
+        <script src="{{hostResource}}/assets/js/tinytooltip.js"></script>
+        <!-- inline scripts related to this page -->
+        <!-- js jquery -->
+        <script language="javascript" type="text/javascript" src="{{hostResource}}/js/jquery-1.9.1.min.js"></script>
+        <!-- js jquery slimscroll-->
+        <script language="javascript" type="text/javascript" src="{{hostResource}}/js/jquery.slimscroll.js"></script>
+        <!-- js data structure -->
+        <script language="javascript" type="text/javascript" src="{{hostResource}}/js/zalo.data.js"></script>
+        <!-- js global -->
+        <script language="javascript" type="text/javascript" src="{{hostResource}}/js/zalo.global.js"></script>
+        <!-- js external -->
+        <script language="javascript" type="text/javascript" src="{{hostResource}}/js/zalo.window.external.js"></script>
+        <!-- js app -->
+        <script language="javascript" type="text/javascript" src="{{hostResource}}/js/zalo.app.js"></script>
+        <!-- js chat -->
+        <script language="javascript" type="text/javascript" src="{{hostResource}}/js/zalo.chat.js"></script>
+        <!-- js xdomain -->
+        <script language="javascript" type="text/javascript" src="{{hostResource}}/js/jquery.xdomainrequest.min.js"></script>
+        <script type="text/javascript">
+
+        // Data initialize
+
+        // Servers config
+
+
+        // string of friend id "<id1>K<id2>K..<idn>"
+        var friendIds="";
+
+        // chat groups data
+        // "GROUP<id>":{id:<id>, name:"<name>", image:"<img-src>", members:[<mem-id>]},
+        var groups_data = {};
+
+        // the user in group chat
+        var anonymous_users = {};
+
+        // current login user
+        //var me_id = {{id}};
+
+        // list user request friend
+
+        // list user send offline message
+        var offline_msg_users = [];
+
+        // current friend list load
+        var current_friend_list = 0;
+
+        //current group list load
+        var current_group_list = 0;
+
+        // error on ajax long polling
+        var errorCount = 0;
+
+        // search key for findfiends
+        var search_key = "";
+
+        // current load results on findfriends
+        var current_search_load = 0;
+        </script>
+
+        <script src="{{hostResource}}/assets/js/WTE.js"></script>
+        <script src="{{hostResource}}/assets/js/chatv2.js"></script>
+        <script src="{{hostResource}}/assets/js/fileupload.js"></script>
+
+        <!-- Autocomple -->
+        <script type="text/javascript" src="{{hostResource}}/assets/js/autocomplete.js"></script>
+        <script type="text/javascript">
+        WTEAutoComplete(
+        {
+            //id cua doi tuong
+            elemId: "autocomplete-search",
+            //so char them moi toi thieu truoc khi goi ajax lay du lieu ve
+            chars: 1
+        });
+        
+$(function() {
+
+    var colorbox_params = {
+        reposition:true,
+        scalePhotos:true,
+        scrolling:false,
+        previous:'<i class="icon-arrow-left"></i>',
+        next:'<i class="icon-arrow-right"></i>',
+        close:'&times;',
+        current:'{current} of {total}',
+        maxWidth:'100%',
+        maxHeight:'100%',
+        onOpen:function(){
+            document.body.style.overflow = 'hidden';
+        },
+        onClosed:function(){
+            document.body.style.overflow = 'auto';
+        },
+        onComplete:function(){
+            $.colorbox.resize();
+        }
+    };
+
+    $('.ace-thumbnails [data-rel="colorbox"]').colorbox(colorbox_params);
+
+    $(window).on('resize.colorbox', function() {
+        try {
+            $.fn.colorbox.load();//to redraw the current frame
+        } catch(e){}
+    });
+
+
+})
+
+        </script>
+
+
+<script type="text/javascript">
+// window onload
+window.onload = function(){
+     $("#tinypopover-emoticons").hide();     
+     $("#contacts_menu").hide();            
+     // $("#user_menu").hide();   
+    loadEmoticons();
+  //  loadFriendList(0, 10);
+   // loadUserGroups(me_id, 0, 10);  
+};
+</script>
+
+<script>
+    $(document).ready(function(){
+        $("#btn-emotion").click(function(){
+            $("#tinypopover-emoticons").toggle();
+        // $("#btn-profile").click(function(){
+        //     $("#user_menu").toggle();
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function(){
+        $("#btn-profile").click(function(){
+            $("#contacts_menu").toggle();
+        // $("#btn-profile").click(function(){
+        //     $("#user_menu").toggle();
+        });
+    });
+</script>
+<script>
+        // Used in profile.xtm
+        (function displayProfile(userId) {
+            $.ajax({
+                        type: "POST",
+                        async: true,
+                        data: {userId:'{{=userId}}', oauthCode: '{{=oauthCode}}'},
+                        url: "http://fresherchat.zapps.vn:"+{{=BUSINESS_PORT}}+"/profile",
+                        success: (function(response) {
+                            if (response !== 'undefined') {
+                                // set display name
+                                $('#name').text(response.displayName);
+                                $('#displayNameViews').text(response.displayName);
+                                //change image avatar of user
+                                $("#avatar").attr('src', response.avatar);
+                                $("#headerAvartar").attr('src', response.avatar);
+
+                                // set user name
+                                $('#uname').text(response.userName);
+                                // set birthday
+                                var date = new Date(response.birthDate*1000);
+                                var birthday = date.getDay() + " tháng " + date.getMonth() + " năm " + date.getFullYear();
+                                $('#birth').text(birthday);
+                                // set gender
+                                // Gender Khác Nam Nữ Không xác định
+                                var gender = "";
+                                switch (response.userGender.toString()) {
+                                    case "UGEN_Undef":
+                                        gender = "Không xác định";
+                                        break;
+                                    case "UGEN_Male":
+                                        gender = "Nam";
+                                        break;
+                                    case "UGEN_Female":
+                                        gender = "Nữ";
+                                        break;
+                                    case "UGEN_Other":
+                                        gender = "Khác";
+                                        break;
+                                }
+                                $('#sex').text(gender);
+                            } else {
+                                alert("Error1!!! set profile");
+                            }
+                        }),
+                        error: (function(error) {
+                            alert("Error!!! set profile");
+                    })
+                });
+        })();
+
+    </script>
+
+</body>
+
+
+</html>
