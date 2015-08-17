@@ -1,2 +1,3 @@
-# wte-fresher-project
-Web Chat for Zalo - Fresher Project at WTE 2013
+# Web Chat Project for Zalo
+
+Overview of project: http://www.slideshare.net/secret/9xKmQvgXBQFQCW
